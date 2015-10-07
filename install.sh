@@ -2,17 +2,27 @@ not() {
   ! [ -x "$(command -v "$1")" ] ;
 }
 
+ok() {
+  echo "→ "$1" OK"
+}
+
 # Update system
-sudo apt-get update
+sudo apt-get update 
 sudo apt-get autoremove -y
 sudo apt-get autoclean -y
-echo "→ System updated!"
+ok "System updated!"
+
+# Curl
+if not curl; then
+  sudo apt-get install curl
+fi
+ok "Curl"
 
 # Vim
 if not vim; then
   sudo apt-get install vim -y
 fi
-echo "→ Vim OK"
+ok "Vim"
 
 # Git
 if not git; then
@@ -20,7 +30,7 @@ if not git; then
   sudo apt-get update
   sudo apt-get install git -y
 fi
-echo "→ Git OK"
+ok "Git"
 
 # Atom
 if not atom; then
@@ -28,6 +38,7 @@ if not atom; then
   sudo apt-get update
   sudo apt-get install atom -y
 fi
+ok "Atom"
 
 # Chrome
 if not google-chrome-stable; then
@@ -36,14 +47,14 @@ if not google-chrome-stable; then
   rm chrome.deb
   sudo apt-get install -fy
 fi
-echo "→ Chrome OK"
+ok "Chrome"
 
 # Docker
 if not docker; then
   wget -qO- https://get.docker.com/ | sh
   sudo usermod -aG docker $(whoami)
 fi
-echo "→ Docker OK"
+ok "Docker"
 
 # KeePassX
 if not keepassx; then
@@ -51,4 +62,4 @@ if not keepassx; then
   sudo apt-get update
   sudo apt-get install keepassx -y
 fi
-echo "→ KeePassX OK"
+ok "KeePassX"
