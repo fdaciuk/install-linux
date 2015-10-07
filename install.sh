@@ -1,3 +1,6 @@
+#!/bin/bash
+set -eo pipefail
+
 not() {
   ! [ -x "$(command -v "$1")" ] ;
 }
