@@ -10,7 +10,17 @@ Just run:
 bash -c "$(wget -O - https://raw.githubusercontent.com/fdaciuk/install-linux/master/install.sh)"
 ```
 
-Enjoy ;)
+## Softwares that will be installed:
+
+- Curl
+- Vim
+- Git
+- Atom
+- Chrome
+- Docker
+- KeePassX
+
+> Enjoy it ;)
 
 ## License
 
