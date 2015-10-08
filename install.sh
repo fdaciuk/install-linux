@@ -69,6 +69,6 @@ ok "KeePassX"
 
 # Dropbox
 if not dropbox; then
-  bash -c "$(https://raw.githubusercontent.com/zant95/elementary-dropbox/master/install.sh)"
+  bash -c "$(https://raw.githubusercontent.com/fdaciuk/elementary-dropbox/master/install.sh)"
 fi
 ok "Dropbox"
