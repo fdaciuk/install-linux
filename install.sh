@@ -2,7 +2,7 @@
 set -eo pipefail
 
 not() {
-  ! [ -x "$(command -v "$1")" ] ;
+  ! [[ -x "$(command -v "$1")" ]] ;
 }
 
 ok() {
