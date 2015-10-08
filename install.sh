@@ -66,3 +66,9 @@ if not keepassx; then
   sudo apt-get install keepassx -y
 fi
 ok "KeePassX"
+
+# Dropbox
+if not dropbox; then
+  bash -c "$(https://raw.githubusercontent.com/zant95/elementary-dropbox/master/install.sh)"
+fi
+ok "Dropbox"
