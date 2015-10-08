@@ -9,9 +9,9 @@ ok() {
   echo "→ "$1" OK"
 }
 
-sudo apt-get update 
 sudo apt-get autoremove -y
 sudo apt-get autoclean -y
+sudo apt-get update
 ok "System updated!"
 
 if not curl; then
