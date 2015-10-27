@@ -99,5 +99,5 @@ fi
 ok "Skype"
 
 # Clean up
-sudo apt-get autoclean
+sudo apt-get autoclean -y
 sudo apt-get autoremove -y
