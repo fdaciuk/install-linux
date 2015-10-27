@@ -28,6 +28,7 @@ sudo apt-get install -y \
   curl \
   vim \
   keepassx \
+  python-dbus
 
 ok "System updated!"
 ok "XSel"
@@ -58,8 +59,8 @@ ok "Atom"
 if has_not google-chrome-stable; then
   wget -O chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   sudo dpkg --force-depends -i chrome.deb
-  rm chrome.deb
   sudo apt-get install -fy
+  rm chrome.deb
 fi
 ok "Chrome"
 
@@ -87,5 +88,12 @@ if has_not skype; then
   sudo dpkg -i skype.deb --ignore-depends
   sudo apt-get install -fy
   rm -rf skype.deb
+
+  # Gnome Shell extension
+  wget -O skype-extension.zip https://github.com/chrisss404/gnome-shell-ext-SkypeNotification/archive/master.zip
+  unzip skype-extension.zip -d skype-extension
+  cp -r skype-extension/gnome-shell-ext-SkypeNotification-master/SkypeNotification@chrisss404.gmail.com/ \
+    ~/.local/share/gnome-shell/extensions
+  rm -rf skype-extension*
 fi
 ok "Skype"
