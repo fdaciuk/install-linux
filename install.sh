@@ -81,3 +81,11 @@ if has_not diffmerge; then
   rm -rf diffmerge.deb
 fi
 ok "Diffmerge"
+
+if has_not skype; then
+  wget -O skype.deb http://download.skype.com/linux/skype-ubuntu-precise_4.3.0.37-1_i386.deb
+  sudo dpkg -i skype.deb --ignore-depends
+  sudo apt-get install -fy
+  rm -rf skype.deb
+fi
+ok "Skype"
