@@ -16,17 +16,30 @@ ok() {
 sudo apt-get autoremove -y
 sudo apt-get autoclean -y
 sudo apt-get update
+sudo apt-get install -y \
+  ubuntu-restricted-extras \
+  xsel \
+  smbclient \
+  htop \
+  openssh-server \
+  s3cmd \
+  zsh \
+  terminator \
+  curl \
+  vim \
+  keepassx \
+
 ok "System updated!"
-
-if has_not curl; then
-  sudo apt-get install curl
-fi
+ok "XSel"
+ok "SMB Client"
+ok "HTop"
+ok "OpenSSH Server"
+ok "S3 CMD"
+ok "ZSH"
+ok "Terminator"
 ok "Curl"
-
-if has_not vim; then
-  sudo apt-get install vim -y
-fi
 ok "Vim"
+ok "KeePassX"
 
 if has_not git; then
   sudo add-apt-repository -y ppa:git-core/ppa
@@ -55,11 +68,6 @@ if has_not docker; then
   sudo usermod -aG docker $(whoami)
 fi
 ok "Docker"
-
-if has_not keepassx; then
-  sudo apt-get install keepassx -y
-fi
-ok "KeePassX"
 
 if has nautilus && has_not dropbox; then
   sudo apt-get install nautilus-dropbox -y
