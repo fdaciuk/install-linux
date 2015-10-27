@@ -73,3 +73,11 @@ if has nautilus && has_not dropbox; then
   sudo apt-get install nautilus-dropbox -y
 fi
 ok "Dropbox"
+
+if has_not diffmerge; then
+  wget -O diffmerge.deb http://download-us.sourcegear.com/DiffMerge/4.2.0/diffmerge_4.2.0.697.stable_amd64.deb
+  sudo dpkg -i diffmerge.deb --ignore-depends
+  sudo apt-get install -fy
+  rm -rf diffmerge.deb
+fi
+ok "Diffmerge"
