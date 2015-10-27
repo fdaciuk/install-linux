@@ -97,3 +97,8 @@ if has_not skype; then
   rm -rf skype-extension*
 fi
 ok "Skype"
+
+# Clean up
+# clean up
+sudo apt-get autoclean
+sudo apt-get autoremove -y
