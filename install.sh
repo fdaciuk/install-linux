@@ -108,7 +108,7 @@ if ! [[ -d "/opt/stremio" ]]; then
   sudo mv stremio.desktop /usr/share/applications/
   rm stremio.tar.gz
 fi
-ok "Stremio"
+ok "Strem.io"
 
 # Clean up
 sudo apt-get autoclean -y
