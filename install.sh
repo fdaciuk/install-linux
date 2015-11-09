@@ -66,7 +66,7 @@ ok "Chrome"
 
 if has_not docker; then
   wget -qO- https://get.docker.com/ | sh
-  sudo usermod -aG docker $(whoami)
+  sudo usermod -aG docker $(id -un)
 fi
 ok "Docker"
 
