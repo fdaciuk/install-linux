@@ -12,15 +12,41 @@ bash -c "$(wget -O - https://raw.githubusercontent.com/fdaciuk/install-linux/mas
 
 ## Softwares that will be installed:
 
+- XSel
+- SMB Client
+- HTop
+- OpenSSH Server
+- S3 CMD
+- ZSH
+- Terminator
 - Curl
 - Vim
+- KeePassX
 - Git
 - Atom
 - Chrome
 - Docker
-- KeePassX
+- Dropbox
+- Diffmerge
+- Skype
+- Strem.io
 
 > Enjoy it ;)
+
+## Useful commands
+
+[**1. Relase idle memory:**](http://www.vivaolinux.com.br/dica/Liberando-memoria-RAM-ociosa)
+
+```sh
+sudo sysctl -w vm.drop_caches=3 
+```
+
+**2. Clear swap:**
+
+```sh
+sudo swapoff -a
+sudo swapon -a
+```
 
 ## License
 
