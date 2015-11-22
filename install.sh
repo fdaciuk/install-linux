@@ -185,11 +185,11 @@ ok "Composer"
   wget http://download.redis.io/redis-stable.tar.gz
   tar xvzf redis-stable.tar.gz
   cd redis-stable
-  make
+  sudo make
   sudo make install
   cd utils
   sudo printf '\n\n\n\n\n\n' | ./install_server.sh
-  rm -rf redis-stable*
+  sudo rm -rf redis-stable*
 #fi
 ok "Redis Server"
 ok "PHP for WordPress"
