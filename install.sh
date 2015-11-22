@@ -110,6 +110,62 @@ if ! [[ -d "/opt/stremio" ]]; then
 fi
 ok "Strem.io"
 
+if has_not nvm; then
+  NODE_VERSION=4
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
+  source $HOME/.bashrc
+  nvm install $NODE_VERSION
+  nvm use $NODE_VERSION
+  nvm alias default $NODE_VERSION
+fi
+ok "NVM"
+
+if has_not php; then
+  # Apache 2
+  sudo apt-get install -y apache2 \
+  
+  # MySQL
+  mysql-server \
+  
+  # PHP
+  php-pear php5-cli php5-curl php5-dev php5-gd php5-imagick php5-imap php5-mcrypt php5-pspell php5-tidy php5-xmlrpc php5-mysql libapache2-mod-php5 \
+  
+  # PHPMyAdmin
+  phpmyadmin
+  sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-enabled/phpmyadmin.conf
+  
+  # Setup vhosts
+  curl -sS -O https://gist.githubusercontent.com/claudiosmweb/ab41b5e8693eea7c02b8/raw/392305085efa1347c26498a1a5027037ae9c73be/000-default.conf
+  sudo rm /etc/apache2/sites-available/000-default.conf
+  sudo mv 000-default.conf /etc/apache2/sites-available
+  
+  # Enable rewrite
+  sudo a2enmod rewrite
+  
+  # Restart Apache2
+  sudo service apache2 restart
+  
+  # WP-CLI
+  curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+  chmod +x wp-cli.phar
+  sudo mv wp-cli.phar /usr/local/bin/wp
+
+  # Composer
+  curl -sS https://getcomposer.org/installer | php
+  sudo mv composer.phar /usr/local/bin/composer
+
+  # Redis Server
+  sudo apt-get install -y build-essential tcl8.5
+  wget http://download.redis.io/redis-stable.tar.gz
+  tar xvzf redis-stable.tar.gz
+  cd redis-stable
+  make
+  make install
+  cd utils
+  printf '\n\n\n\n\n\n' | ./install_server.sh
+fi
+ok "PHP for WordPress"
+
 # Clean up
 sudo apt-get autoclean -y
 sudo apt-get autoremove -y
