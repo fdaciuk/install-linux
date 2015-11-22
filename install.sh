@@ -120,16 +120,17 @@ if ! [[ -d "$HOME/.nvm" ]]; then
 fi
 ok "NVM"
 
-if has_not php; then
-  # Apache 2
+if has_not apache2; then
   sudo apt-get install -y apache2
-  ok "Apache"
-  
-  # MySQL
+fi
+ok "Apache"
+
+if has_not mysql; then
   sudo apt-get install -y mysql-server
-  ok "MySQL"
-  
-  # PHP
+fi
+ok "MySQL"
+
+if has_not php; then
   sudo apt-get install -y php-pear \
     php5-cli \
     php5-curl \
@@ -143,36 +144,43 @@ if has_not php; then
     php5-xmlrpc \
     php5-mysql \
     libapache2-mod-php5
-  ok "PHP"
-  
-  # PHPMyAdmin
+fi
+ok "PHP"
+
+if ! [[ -d "/etc/phpmyadmin" ]]; then
   sudo apt-get install -y phpmyadmin
   sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-enabled/phpmyadmin.conf
-  ok "PHPMyAdmin"
+fi
+ok "PHPMyAdmin"
+
+# Setup vhosts
+curl -sS -O https://gist.githubusercontent.com/claudiosmweb/ab41b5e8693eea7c02b8/raw/392305085efa1347c26498a1a5027037ae9c73be/000-default.conf
+sudo rm /etc/apache2/sites-available/000-default.conf
+sudo mv 000-default.conf /etc/apache2/sites-available
+ok "Setup vhosts"
   
-  # Setup vhosts
-  curl -sS -O https://gist.githubusercontent.com/claudiosmweb/ab41b5e8693eea7c02b8/raw/392305085efa1347c26498a1a5027037ae9c73be/000-default.conf
-  sudo rm /etc/apache2/sites-available/000-default.conf
-  sudo mv 000-default.conf /etc/apache2/sites-available
+# Enable rewrite
+sudo a2enmod rewrite
+ok "Enable Apache rewrite"
   
-  # Enable rewrite
-  sudo a2enmod rewrite
+# Restart Apache2
+sudo service apache2 restart
+ok "Restart Apache"
   
-  # Restart Apache2
-  sudo service apache2 restart
-  
-  # WP-CLI
+if has_not wp; then
   curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
   chmod +x wp-cli.phar
   sudo mv wp-cli.phar /usr/local/bin/wp
-  ok "WP-CLI"
+fi
+ok "WP-CLI"
 
-  # Composer
+if has_not composer; then
   curl -sS https://getcomposer.org/installer | php
   sudo mv composer.phar /usr/local/bin/composer
-  ok "Composer"
+fi
+ok "Composer"
 
-  # Redis Server
+if has_not redis-server; then
   sudo apt-get install -y build-essential tcl8.5
   wget http://download.redis.io/redis-stable.tar.gz
   tar xvzf redis-stable.tar.gz
@@ -181,10 +189,12 @@ if has_not php; then
   make install
   cd utils
   printf '\n\n\n\n\n\n' | ./install_server.sh
-  ok "Redis Server"
 fi
+ok "Redis Server"
 ok "PHP for WordPress"
 
 # Clean up
 sudo apt-get autoclean -y
 sudo apt-get autoremove -y
+
+ok "Installation finished!"
