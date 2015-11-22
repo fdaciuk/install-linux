@@ -165,10 +165,12 @@ if has_not php; then
   curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
   chmod +x wp-cli.phar
   sudo mv wp-cli.phar /usr/local/bin/wp
+  ok "WP-CLI"
 
   # Composer
   curl -sS https://getcomposer.org/installer | php
   sudo mv composer.phar /usr/local/bin/composer
+  ok "Composer"
 
   # Redis Server
   sudo apt-get install -y build-essential tcl8.5
@@ -179,6 +181,7 @@ if has_not php; then
   make install
   cd utils
   printf '\n\n\n\n\n\n' | ./install_server.sh
+  ok "Redis Server"
 fi
 ok "PHP for WordPress"
 
