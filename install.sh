@@ -110,7 +110,7 @@ if ! [[ -d "/opt/stremio" ]]; then
 fi
 ok "Strem.io"
 
-if ! [[ -d "~/.nvm" ]]; then
+if ! [[ -d "$HOME/.nvm" ]]; then
   NODE_VERSION=4
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
   source ~/.bashrc
