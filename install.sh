@@ -122,6 +122,20 @@ ok "NVM"
 
 if has_not apache2; then
   sudo apt-get install -y apache2
+  
+  # Setup vhosts
+  curl -sS -O https://gist.githubusercontent.com/claudiosmweb/ab41b5e8693eea7c02b8/raw/392305085efa1347c26498a1a5027037ae9c73be/000-default.conf
+  sudo rm /etc/apache2/sites-available/000-default.conf
+  sudo mv 000-default.conf /etc/apache2/sites-available
+  ok "Setup vhosts"
+    
+  # Enable rewrite
+  sudo a2enmod rewrite
+  ok "Enable Apache rewrite"
+    
+  # Restart Apache2
+  sudo service apache2 restart
+  ok "Restart Apache"
 fi
 ok "Apache"
 
@@ -152,20 +166,6 @@ if ! [[ -d "/etc/phpmyadmin" ]]; then
   sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-enabled/phpmyadmin.conf
 fi
 ok "PHPMyAdmin"
-
-# Setup vhosts
-curl -sS -O https://gist.githubusercontent.com/claudiosmweb/ab41b5e8693eea7c02b8/raw/392305085efa1347c26498a1a5027037ae9c73be/000-default.conf
-sudo rm /etc/apache2/sites-available/000-default.conf
-sudo mv 000-default.conf /etc/apache2/sites-available
-ok "Setup vhosts"
-  
-# Enable rewrite
-sudo a2enmod rewrite
-ok "Enable Apache rewrite"
-  
-# Restart Apache2
-sudo service apache2 restart
-ok "Restart Apache"
   
 if has_not wp; then
   curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
