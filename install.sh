@@ -122,17 +122,33 @@ ok "NVM"
 
 if has_not php; then
   # Apache 2
-  sudo apt-get install -y apache2 \
+  sudo apt-get install -y apache2
+  ok "Apache"
   
   # MySQL
-  mysql-server \
+  sudo apt-get install -y mysql-server
+  ok "MySQL"
   
   # PHP
-  php-pear php5-cli php5-curl php5-dev php5-gd php5-imagick php5-imap php5-mcrypt php5-pspell php5-tidy php5-xmlrpc php5-mysql libapache2-mod-php5 \
+  sudo apt-get install -y php-pear \
+    php5-cli \
+    php5-curl \
+    php5-dev \
+    php5-gd \
+    php5-imagick \
+    php5-imap \
+    php5-mcrypt \
+    php5-pspell \
+    php5-tidy \
+    php5-xmlrpc \
+    php5-mysql \
+    libapache2-mod-php5
+  ok "PHP"
   
   # PHPMyAdmin
-  phpmyadmin
+  sudo apt-get install -y phpmyadmin
   sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-enabled/phpmyadmin.conf
+  ok "PHPMyAdmin"
   
   # Setup vhosts
   curl -sS -O https://gist.githubusercontent.com/claudiosmweb/ab41b5e8693eea7c02b8/raw/392305085efa1347c26498a1a5027037ae9c73be/000-default.conf
