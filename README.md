@@ -30,6 +30,14 @@ bash -c "$(wget -O - https://raw.githubusercontent.com/fdaciuk/install-linux/mas
 - Diffmerge
 - Skype
 - Strem.io
+- NVM
+- Apache 2
+- MySQL
+- PHP
+- PHPMyAdmin
+- WP-CLI
+- Composer
+- Redis Server
 
 > Enjoy it ;)
 
