@@ -180,7 +180,7 @@ if has_not composer; then
 fi
 ok "Composer"
 
-#if has_not redis-server; then
+if has_not redis-server; then
   sudo apt-get install -y build-essential tcl8.5
   wget http://download.redis.io/redis-stable.tar.gz
   tar xvzf redis-stable.tar.gz
@@ -189,8 +189,8 @@ ok "Composer"
   sudo make install
   cd utils
   sudo printf '\n\n\n\n\n\n' | ./install_server.sh
-  sudo rm -rf redis-stable*
-#fi
+  rm -rf redis-stable*
+fi
 ok "Redis Server"
 ok "PHP for WordPress"
 
