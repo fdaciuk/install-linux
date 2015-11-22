@@ -185,8 +185,8 @@ if has_not redis-server; then
   wget http://download.redis.io/redis-stable.tar.gz
   tar xvzf redis-stable.tar.gz
   cd redis-stable
-  make
-  make install
+  sudo make
+  sudo make install
   cd utils
   printf '\n\n\n\n\n\n' | ./install_server.sh
 fi
