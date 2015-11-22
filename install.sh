@@ -113,7 +113,7 @@ ok "Strem.io"
 if has_not nvm; then
   NODE_VERSION=4
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
-  source $HOME/.bashrc
+  source ~/.bashrc
   nvm install $NODE_VERSION
   nvm use $NODE_VERSION
   nvm alias default $NODE_VERSION
