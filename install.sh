@@ -188,7 +188,8 @@ if has_not redis-server; then
   sudo make
   sudo make install
   cd utils
-  sudo printf '\n\n\n\n\n\n' | ./install_server.sh
+  sudo printf '\n\n\n\n\n\n' | sudo ./install_server.sh
+  cd ../..
   rm -rf redis-stable*
 fi
 ok "Redis Server"
