@@ -138,6 +138,7 @@ if has_not apache2; then
   ok "Restart Apache"
   
   sudo chown -R $USER:$USER /var/www
+  ln -s /var/www ~/code
 fi
 ok "Apache"
 
