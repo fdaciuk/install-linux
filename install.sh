@@ -120,6 +120,9 @@ if ! [[ -d "$HOME/.nvm" ]]; then
 fi
 ok "NVM"
 
+sudo npm i -g nodemon
+ok "Node global modules"
+
 if has_not apache2; then
   sudo apt-get install -y apache2
   
