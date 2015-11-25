@@ -121,7 +121,7 @@ fi
 ok "NVM"
 
 sudo npm i -g nodemon
-ok "Node global modules"
+ok "NodeJS global modules"
 
 if has_not apache2; then
   sudo apt-get install -y apache2
