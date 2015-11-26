@@ -31,6 +31,7 @@ bash -c "$(wget -O - https://raw.githubusercontent.com/fdaciuk/install-linux/mas
 - Skype
 - Strem.io
 - NVM
+  - Nodemon
 - Apache 2
 - MySQL
 - PHP
