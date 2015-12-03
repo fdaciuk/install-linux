@@ -110,6 +110,15 @@ if ! [[ -d "/opt/stremio" ]]; then
 fi
 ok "Strem.io"
 
+if has_not simplescreenrecorder; then
+  sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder -y
+  sudo apt-get update
+  sudo apt-get install simplescreenrecorder -y
+  # if you want to record 32-bit OpenGL applications on a 64-bit system:
+  sudo apt-get install simplescreenrecorder-lib:i386 -y
+fi
+ok "Simple Screen Recorder"
+
 if ! [[ -d "$HOME/.nvm" ]]; then
   NODE_VERSION=4
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
