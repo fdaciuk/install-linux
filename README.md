@@ -30,6 +30,7 @@ bash -c "$(wget -O - https://raw.githubusercontent.com/fdaciuk/install-linux/mas
 - Diffmerge
 - Skype
 - Strem.io
+- Simple Screen Recorder
 - NVM
   - Nodemon
 - Apache 2
