@@ -129,7 +129,7 @@ if ! [[ -d "$HOME/.nvm" ]]; then
 fi
 ok "NVM"
 
-sudo npm i -g nodemon
+npm i -g nodemon
 ok "NodeJS global modules"
 
 if has_not apache2; then
