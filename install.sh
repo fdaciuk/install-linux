@@ -28,7 +28,8 @@ sudo apt-get install -y \
   curl \
   vim \
   keepassx \
-  python-dbus
+  python-dbus \
+  vlc browser-plugin-vlc
 
 ok "System updated!"
 ok "XSel"
@@ -41,6 +42,7 @@ ok "Terminator"
 ok "Curl"
 ok "Vim"
 ok "KeePassX"
+ok "VLC"
 
 if has_not git; then
   sudo add-apt-repository -y ppa:git-core/ppa
