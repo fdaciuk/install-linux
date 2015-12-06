@@ -22,6 +22,7 @@ bash -c "$(wget -O - https://raw.githubusercontent.com/fdaciuk/install-linux/mas
 - Curl
 - Vim
 - KeePassX
+- VLC
 - Git
 - Atom
 - Chrome
