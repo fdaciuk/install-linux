@@ -41,22 +41,29 @@ bash -c "$(wget -O - https://raw.githubusercontent.com/fdaciuk/install-linux/mas
 - WP-CLI
 - Composer
 - Redis Server
+- Flowblade (Video editor)
 
 > Enjoy it ;)
 
 ## Useful commands
 
-[**1. Relase idle memory:**](http://www.vivaolinux.com.br/dica/Liberando-memoria-RAM-ociosa)
+[**Relase idle memory**](http://www.vivaolinux.com.br/dica/Liberando-memoria-RAM-ociosa)
 
 ```sh
 sudo sysctl -w vm.drop_caches=3 
 ```
 
-**2. Clear swap:**
+**Clear swap**
 
 ```sh
 sudo swapoff -a
 sudo swapon -a
+```
+
+**Removing dpkg package**
+
+```sh
+sudo dpkg -r <package>
 ```
 
 ## License

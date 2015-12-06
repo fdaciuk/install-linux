@@ -210,6 +210,14 @@ fi
 ok "Redis Server"
 ok "PHP for WordPress"
 
+if has_not flowblade; then
+  wget -O flowblade.deb https://www.dropbox.com/s/xe94cjwmf195de2/flowblade-1.4.0-1_all.deb?dl=1
+  sudo dpkg -i flowblade.deb
+  sudo apt-get install -fy
+  rm -rf flowblade.deb
+fi
+ok "Flowblade (Video editor)"
+
 # Clean up
 sudo apt-get autoclean -y
 sudo apt-get autoremove -y
