@@ -47,10 +47,19 @@ bash -c "$(wget -O - https://raw.githubusercontent.com/fdaciuk/install-linux/mas
 
 ## Useful commands
 
+**Auto mount a partition:**
+
+Add entry on your `/etc/fstab` file:
+
+```fstab
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+/dev/sdaX       /media/storage  ext4    defaults        0       1
+```
+
 [**Relase idle memory**](http://www.vivaolinux.com.br/dica/Liberando-memoria-RAM-ociosa)
 
 ```sh
-sudo sysctl -w vm.drop_caches=3 
+sudo sysctl -w vm.drop_caches=3
 ```
 
 **Clear swap**
