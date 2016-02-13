@@ -8,14 +8,17 @@ Just run:
 
 **Ubuntu (Debian like):**
 
-```sh
+```console
 bash -c "$(wget -O - https://raw.githubusercontent.com/fdaciuk/install-linux/master/install.sh)"
 ```
 
 ---
 
 **Apricity (Arch Linux like):**
+
+```console
 bash -c "$(wget -O - https://raw.githubusercontent.com/fdaciuk/install-linux/master/apricity-install.sh)"
+```
 
 To install some softwares, you will need `yaourt`.
 
@@ -28,13 +31,13 @@ Server = http://repo.archlinux.fr/$arch
 
 After that, update the system:
 
-```
+```console
 sudo pacman -Sy
 ```
 
 If `yaourt` is not installed, install it:
 
-```
+```console
 sudo pacman -S yaourt
 ```
 
