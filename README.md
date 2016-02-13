@@ -6,9 +6,41 @@
 
 Just run:
 
+**Ubuntu (Debian like):**
+
 ```sh
 bash -c "$(wget -O - https://raw.githubusercontent.com/fdaciuk/install-linux/master/install.sh)"
 ```
+
+---
+
+**Apricity (Arch Linux like):**
+bash -c "$(wget -O - https://raw.githubusercontent.com/fdaciuk/install-linux/master/apricity-install.sh)"
+
+To install some softwares, you will need `yaourt`.
+
+Edit your `/etc/pacman.conf`, adding this lines:
+
+```
+[archlinuxfr]
+Server = http://repo.archlinux.fr/$arch
+```
+
+After that, update the system:
+
+```
+sudo pacman -Sy
+```
+
+If `yaourt` is not installed, install it:
+
+```
+sudo pacman -S yaourt
+```
+
+Then, use `yaourt -S <package-name> to install any package ;)
+
+---
 
 ## Softwares that will be installed:
 
