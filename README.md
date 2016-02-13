@@ -41,7 +41,7 @@ If `yaourt` is not installed, install it:
 sudo pacman -S yaourt
 ```
 
-Then, use `yaourt -S <package-name> to install any package ;)
+Then, use `yaourt` -S <package-name> to install any package ;)
 
 ---
 
