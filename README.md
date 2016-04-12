@@ -1,4 +1,4 @@
-# install-linux
+# install linux
 
 > Softwares to install on Linux just with one command
 
