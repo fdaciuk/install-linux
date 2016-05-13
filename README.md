@@ -77,6 +77,7 @@ Then, use `yaourt` -S <package-name> to install any package ;)
 - Redis Server
 - Flowblade (Video editor)
 - OH My ZSH
+- Heroku Toolbelt
 
 > Enjoy it ;)
 
@@ -84,9 +85,19 @@ Then, use `yaourt` -S <package-name> to install any package ;)
 
 **Configure GIT:**
 
-```sh
+```console
 git config --global user.email "your@email"
 git config --global user.name "Your name"
+```
+
+**Generate SSH Keys (or copy, if you already have):**
+
+```sh
+ssh-keygen -t rsa -b 4096 -C "your@email"
+
+# Try
+ssh -T git@github.com
+ssh -T git@bitbucket.com
 ```
 
 ## Useful commands
