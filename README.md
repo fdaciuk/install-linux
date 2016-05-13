@@ -80,6 +80,15 @@ Then, use `yaourt` -S <package-name> to install any package ;)
 
 > Enjoy it ;)
 
+## After Install
+
+**Configure GIT:**
+
+```sh
+git config --global user.email "your@email"
+git config --global user.name "Your name"
+```
+
 ## Useful commands
 
 **Auto mount a partition:**
