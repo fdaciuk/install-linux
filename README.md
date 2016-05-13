@@ -76,6 +76,7 @@ Then, use `yaourt` -S <package-name> to install any package ;)
 - Composer
 - Redis Server
 - Flowblade (Video editor)
+- OH My ZSH
 
 > Enjoy it ;)
 
