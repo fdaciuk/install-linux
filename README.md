@@ -59,7 +59,6 @@ Then, use `yaourt` -S <package-name> to install any package ;)
 - KeePassX
 - VLC
 - Git
-- Atom
 - Chrome
 - Docker
 - Dropbox
