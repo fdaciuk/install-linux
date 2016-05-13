@@ -65,6 +65,8 @@ if has_not docker; then
   sudo apt-get purge lxc-docker
   sudo apt-get install docker-engine -y
   sudo service docker start
+  sudo groupadd docker
+  sudo usermod -aG docker $(id -un)
 fi
 ok "Docker"
 
