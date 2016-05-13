@@ -218,6 +218,11 @@ if has_not flowblade; then
 fi
 ok "Flowblade (Video editor)"
 
+if ! [[ -d "$HOME/.oh-my-zsh" ]]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
+ok "OH My ZSH"
+
 # Clean up
 sudo apt-get autoclean -y
 sudo apt-get autoremove -y
