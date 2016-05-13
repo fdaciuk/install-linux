@@ -223,6 +223,9 @@ if ! [[ -d "$HOME/.oh-my-zsh" ]]; then
 fi
 ok "OH My ZSH"
 
+wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+ok "Heroku Toolbelt"
+
 # Clean up
 sudo apt-get autoclean -y
 sudo apt-get autoremove -y
