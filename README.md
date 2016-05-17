@@ -1,6 +1,6 @@
 # install linux
 
-> Softwares to install on Linux just with one command
+> Softwares to install on Linux with just one command
 
 ## Usage
 
