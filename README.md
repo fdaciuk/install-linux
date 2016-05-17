@@ -90,7 +90,7 @@ git config --global user.email "your@email"
 git config --global user.name "Your name"
 ```
 
-**Generate SSH Keys (or copy, if you already have):**
+**Generate SSH Keys (or copy, if you already have one):**
 
 ```sh
 ssh-keygen -t rsa -b 4096 -C "your@email"
