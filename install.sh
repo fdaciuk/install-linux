@@ -223,7 +223,9 @@ if ! [[ -d "$HOME/.oh-my-zsh" ]]; then
 fi
 ok "OH My ZSH"
 
-wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+if has_not heroku; then
+  wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+fi
 ok "Heroku Toolbelt"
 
 # Clean up
