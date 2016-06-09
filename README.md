@@ -113,21 +113,27 @@ Add entry on your `/etc/fstab` file:
 
 [**Relase idle memory**](http://www.vivaolinux.com.br/dica/Liberando-memoria-RAM-ociosa)
 
-```sh
+```console
 sudo sysctl -w vm.drop_caches=3
 ```
 
 **Clear swap**
 
-```sh
+```console
 sudo swapoff -a
 sudo swapon -a
 ```
 
 **Removing dpkg package**
 
-```sh
+```console
 sudo dpkg -r <package>
+```
+
+**Stop services from startup without remove**
+
+```console
+sudo update-rc.d <service> remove
 ```
 
 ## License
