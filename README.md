@@ -133,7 +133,13 @@ sudo dpkg -r <package>
 **Stop services from startup without remove**
 
 ```console
-sudo update-rc.d <service> remove
+sudo update-rc.d -f <service> remove
+```
+
+**Check which services are running**
+
+```console
+service --status-all
 ```
 
 ## License
