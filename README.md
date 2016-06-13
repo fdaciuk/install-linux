@@ -78,6 +78,7 @@ Then, use `yaourt` -S <package-name> to install any package ;)
 - Flowblade (Video editor)
 - OH My ZSH
 - Heroku Toolbelt
+- MongoDB
 
 > Enjoy it ;)
 
