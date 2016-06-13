@@ -229,8 +229,9 @@ fi
 ok "Heroku Toolbelt"
 
 if has_not mongod; then
-  bash -c "$(wget -O - https://raw.githubusercontent.com/fdaciuk/install-linux/master/mongo-ubuntu.sh)"
+  sudo bash -c "$(wget -O - https://raw.githubusercontent.com/fdaciuk/install-linux/master/mongo-ubuntu.sh)"
 fi
+ok "Mongo DB"
 
 # Clean up
 sudo apt-get autoclean -y
