@@ -229,7 +229,7 @@ fi
 ok "Heroku Toolbelt"
 
 if has_not mongod; then
-  echo "mongo"
+  bash -c "$(wget -O - https://raw.githubusercontent.com/fdaciuk/install-linux/master/mongo-ubuntu.sh)"
 fi
 
 # Clean up
