@@ -228,6 +228,10 @@ if has_not heroku; then
 fi
 ok "Heroku Toolbelt"
 
+if has_not mongod; then
+  echo "mongo"
+fi
+
 # Clean up
 sudo apt-get autoclean -y
 sudo apt-get autoremove -y
