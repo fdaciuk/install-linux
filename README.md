@@ -101,6 +101,13 @@ ssh -T git@github.com
 ssh -T git@bitbucket.com
 ```
 
+**Generate GPG Keys:**
+
+- Follow this steps: https://help.github.com/articles/generating-a-new-gpg-key/
+- Telling Git about your GPG Keys: https://help.github.com/articles/telling-git-about-your-gpg-key/
+
+Then, just commit using `git commit -S` =)
+
 ## Useful commands
 
 **Auto mount a partition:**
