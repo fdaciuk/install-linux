@@ -108,6 +108,10 @@ ssh -T git@bitbucket.com
 
 Then, just commit using `git commit -S` =)
 
+## Install Top Icons (Gnome Shell)
+
+https://github.com/phocean/TopIcons-plus
+
 ## Useful commands
 
 **Auto mount a partition:**
