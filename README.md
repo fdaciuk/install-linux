@@ -182,7 +182,7 @@ After that, run:
 sudo mount /dev/sda3 /mnt 
 ```
 
-Where sda3 contains the recently copied boot and root partitions).
+Where sda3 contains the recently copied boot and root partitions.
 
 ```sh
 sudo mount --bind /dev/ /mnt/dev/
