@@ -32,6 +32,7 @@ our driver requires firmware that is missing:
 
 With a working internet connection by ethernet, tethered or whatever means possible, please open a terminal and do:
 
+```console
 sudo apt-get update
 sudo apt-get install git
 git clone https://github.com/kvalo/ath10k-firmware.git
@@ -41,6 +42,7 @@ cd ath10k-firmware/QCA9377/hw1.0
 sudo cp *  /lib/firmware/ath10k/QCA9377/hw1.0
 cd /lib/firmware/ath10k/QCA9377/hw1.0
 sudo mv firmware-5.bin_WLAN.TF.1.0-00267-1  firmware-5.bin
+```
 
 Reboot and your wireless should be working.
 
@@ -52,6 +54,7 @@ Reboot and your wireless should be working.
 
 solução do problema foi essa:
 
+```
 sudo mkdir -p /lib/firmware/ath10k/QCA6174/hw3.0/
 
 sudo rm /lib/firmware/ath10k/QCA6174/hw3.0/* 2> /dev/null
@@ -61,6 +64,7 @@ sudo wget -O /lib/firmware/ath10k/QCA6174/hw3.0/board.bin https://github.com/Fir
 sudo wget -O /lib/firmware/ath10k/QCA6174/hw3.0/firmware-4.bin https://github.com/FireWalkerX/ath10k-firmware/blob/7e56cbb94182a2fdab110cf5bfeded8fd1d44d30/QCA6174/hw3.0/firmware-4.bin_WLAN.RM.2.0-00180-QCARMSWPZ-1?raw=true
 
 sudo chmod +x /lib/firmware/ath10k/QCA6174/hw3.0/*
+```
 
 reinicie o notebook e deve funcionar!
 
