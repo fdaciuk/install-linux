@@ -99,7 +99,7 @@ fi
 ok "Skype"
 
 if ! [[ -d "/opt/stremio" ]]; then
-  curl -#So stremio.tar.gz http://178.62.254.47/Stremio3.3.3.linux.tar.gz
+  curl -#So stremio.tar.gz http://dl.strem.io/Stremio3.5.7.linux.tar.gz
   sudo mkdir -p /opt/stremio
   sudo tar -xvzf stremio.tar.gz -C /opt/stremio
   curl -SO# http://www.strem.io/3.0/stremio-white-small.png
