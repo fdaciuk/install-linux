@@ -28,6 +28,7 @@ sudo apt-get install -y \
   keepassx \
   python-dbus \
   autojump \
+  meld \
   vlc browser-plugin-vlc
 
 ok "System updated!"
@@ -42,6 +43,7 @@ ok "Curl"
 ok "Vim"
 ok "KeePassX"
 ok "Autojump"
+ok "Meld"
 ok "VLC"
 
 if has_not git; then
