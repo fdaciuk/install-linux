@@ -112,6 +112,18 @@ Then, just commit using `git commit -S` =)
 
 https://github.com/phocean/TopIcons-plus
 
+## Install fonts
+
+**Consolas:**
+
+fonte: http://ssup2.iptime.org/wiki/Ubuntu_Consolas_Font_Install
+
+**Source Code PRO:**
+
+```console
+bash -c "$(wget -O - https://gist.githubusercontent.com/fdaciuk/8b3269a3d797ee723672/raw/c8344f9cd4f91a8ae69535c833253ae87ef86d5b/sourcecodepro.sh)"
+```
+
 ## Useful commands
 
 **Auto mount a partition:**
