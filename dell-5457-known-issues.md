@@ -12,12 +12,6 @@ Deixe o grub no `/dev/sda`;
 
 Após a instalação, o boot deverá carregar normalmente.
 
-### Sobre o driver de video
-
-Não instale  o que está em Drivers adicionais. A tela fica escura e não carrega o sistema coretamente. Ainda não tem solução :(
-
-Temos que aguardar a NVidia lançar a atualização do driver para essa versão do Ubuntu.
-
 ### Instalação da placa wireless:
 
 **Modelo:**
@@ -37,3 +31,11 @@ bash -c "$(wget -O - https://raw.githubusercontent.com/fdaciuk/install-linux/mas
 reinicie o notebook e deve funcionar!
 
 > fonte: https://www.vivaolinux.com.br/topico/Rede-Wireless/Alguem-me-ajude-wifi-ubuntu-1604?pagina=2
+
+---
+
+### Sobre o driver de video
+
+Não instale  o que está em Drivers adicionais. A tela fica escura e não carrega o sistema coretamente. Ainda não tem solução :(
+
+Temos que aguardar a NVidia lançar a atualização do driver para essa versão do Ubuntu.
