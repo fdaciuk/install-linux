@@ -16,7 +16,9 @@ Após a instalação, o boot deverá carregar normalmente. Acesse o terminal, fa
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install ubuntu-restricted-extras git 
 ```
 
-Instalação da placa wireless:
+### Instalação da placa wireless:
+
+**Modelo:**
 
 ```
 description: Wireless interface
@@ -24,7 +26,7 @@ product: QCA6174 802.11ac Wireless Network Adapter
 vendor: Qualcomm Atheros
 ```
 
-## Passo 1:
+#### Passo 1:
 
 our driver requires firmware that is missing:
 
@@ -50,7 +52,7 @@ Reboot and your wireless should be working.
 
 ---
 
-## Passo 2:
+#### Passo 2:
 
 solução do problema foi essa:
 
