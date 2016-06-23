@@ -32,34 +32,6 @@ product: QCA6174 802.11ac Wireless Network Adapter
 vendor: Qualcomm Atheros
 ```
 
-#### Passo 1:
-
-our driver requires firmware that is missing:
-
-    Direct firmware load for ath10k/QCA9377/hw1.0/firmware-5.bin failed with error -2
-
-With a working internet connection by ethernet, tethered or whatever means possible, please open a terminal and do:
-
-```console
-sudo apt-get update
-sudo apt-get install git
-git clone https://github.com/kvalo/ath10k-firmware.git
-sudo mkdir /lib/firmware/ath10k/QCA9377
-sudo mkdir /lib/firmware/ath10k/QCA9377/hw1.0
-cd ath10k-firmware/QCA9377/hw1.0
-sudo cp *  /lib/firmware/ath10k/QCA9377/hw1.0
-cd /lib/firmware/ath10k/QCA9377/hw1.0
-sudo mv firmware-5.bin_WLAN.TF.1.0-00267-1  firmware-5.bin
-```
-
-Reboot and your wireless should be working.
-
-> fonte: http://askubuntu.com/questions/763080/no-wifi-in-qualcom-atheros-ubuntu-16-04-acer-aspire-e-15
-
----
-
-#### Passo 2:
-
 solução do problema foi essa:
 
 ```
