@@ -27,6 +27,7 @@ sudo apt-get install -y \
   vim-gnome \
   keepassx \
   python-dbus \
+  autojump \
   vlc browser-plugin-vlc
 
 ok "System updated!"
@@ -40,6 +41,7 @@ ok "Terminator"
 ok "Curl"
 ok "Vim"
 ok "KeePassX"
+ok "Autojump"
 ok "VLC"
 
 if has_not git; then
@@ -48,6 +50,13 @@ if has_not git; then
   sudo apt-get install git -y
 fi
 ok "Git"
+
+if has_not pip; then
+  sudo apt-get install python-pip python-dev build-essential
+  sudo pip install --upgrade pip 
+  sudo pip install --upgrade virtualenv
+fi
+ok "pip"
 
 if has_not google-chrome-stable; then
   wget -O chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
