@@ -239,6 +239,9 @@ if has_not mongod; then
 fi
 ok "Mongo DB"
 
+sudo pip install wakatime
+ok "Wakatime CLI (https://github.com/wbinglee/zsh-wakatime)"
+
 # Clean up
 sudo apt-get autoclean -y
 sudo apt-get autoremove -y
