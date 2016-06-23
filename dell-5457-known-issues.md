@@ -10,11 +10,7 @@ Quando chegar na hora de selecionar as partições, não remover as que já exis
 
 Deixe o grub no `/dev/sda`;
 
-Após a instalação, o boot deverá carregar normalmente. Acesse o terminal, faça a atualização do sistema e a instalação dos pacotes básicos para continuar a instalação:
-
-```sh
-sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install ubuntu-restricted-extras git 
-```
+Após a instalação, o boot deverá carregar normalmente.
 
 ### Sobre o driver de video
 
@@ -34,7 +30,7 @@ vendor: Qualcomm Atheros
 
 Execute o comando abaixo:
 
-```
+```console
 bash -c "$(wget -O - https://raw.githubusercontent.com/fdaciuk/install-linux/master/qualcomm-atheros-wireless.sh)"
 ```
 
