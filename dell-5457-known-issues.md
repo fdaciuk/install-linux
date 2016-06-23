@@ -16,6 +16,12 @@ Após a instalação, o boot deverá carregar normalmente. Acesse o terminal, fa
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install ubuntu-restricted-extras git 
 ```
 
+### Sobre o driver de video
+
+Não instale  o que está em Drivers adicionais. A tela fica escura e não carrega o sistema coretamente. Ainda não tem solução :(
+
+Temos que aguardar a NVidia lançar a atualização do driver para essa versão do Ubuntu.
+
 ### Instalação da placa wireless:
 
 **Modelo:**
