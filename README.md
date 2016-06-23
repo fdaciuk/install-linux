@@ -166,6 +166,34 @@ sudo update-rc.d -f <service> remove
 service --status-all
 ```
 
+## Clone an installation
+
+After boot from a Live USB, run on terminal:
+
+```
+dd if=/dev/sdb3 of=/dev/sda3
+```
+
+Where `sdb3` is the origin, and `sda3` is the destination.
+
+After that, run:
+
+```
+sudo mount /dev/sda3 /mnt 
+```
+
+Where sda3 contains the recently copied boot and root partitions).
+
+```sh
+sudo mount --bind /dev/ /mnt/dev/
+sudo mount -t /proc none /mnt/proc
+sudo chroot /mnt
+# note this is `sda` not `sda3`
+sudo grub-install /dev/sda 
+sudo update-grub
+exit
+```
+
 ## License
 
 [MIT](https://github.com/fdaciuk/licenses/blob/master/MIT-LICENSE.md) © Fernando Daciuk
