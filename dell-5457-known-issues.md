@@ -1,5 +1,21 @@
 # Problemas conhecidos
 
+## Instalação passo-a-passo do Ubuntu Gnome 16.04
+
+Entrar na BIOS, e resetar as configurações para configurações de fábrica (Factory settings);
+
+Dar boot via pendrive e instalar normalmente, com o cabo de rede plugado, já que o wifi nao será reconhecido ainda;
+
+Quando chegar na hora de selecionar as partições, não remover as que já existem. Só altere a partição onde está o Ubuntu 14.04, deixando o espaço que você precisar;
+
+Deixe o grub no `/dev/sda`;
+
+Após a instalação, o boot deverá carregar normalmente. Acesse o terminal, faça a atualização do sistema e a instalação dos pacotes básicos para continuar a instalação:
+
+```sh
+sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install ubuntu-restricted-extras git 
+```
+
 Instalação da placa wireless:
 
 ```
