@@ -50,7 +50,7 @@ Selecione o `lightdm` como padrão.
 
 Reinicie e veja se o está fazendo login pelo lightdm.
 
-Abra um novo TTY (`Ctrl + Alt + F1`) e execute:
+Abra um novo TTY (<kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>F1</kbd>) e execute:
 
 ```console
 sudo apt-get purge nvidia-*
