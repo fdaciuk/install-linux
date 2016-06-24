@@ -38,6 +38,8 @@ reinicie o notebook e deve funcionar!
 
 Não instale  o que está em Drivers adicionais. A tela fica escura e não carrega o sistema coretamente. Para instalar o driver de video, siga os passos abaixo:
 
+> fonte: http://askubuntu.com/questions/760934/graphics-issues-after-installing-ubuntu-16-04-with-nvidia-graphics
+
 - Remova o login automatico (se estiver habilitado);
 
 - Troque o GDM pelo Lightdm:
