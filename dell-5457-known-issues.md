@@ -36,6 +36,36 @@ reinicie o notebook e deve funcionar!
 
 ### Sobre o driver de video
 
-Não instale  o que está em Drivers adicionais. A tela fica escura e não carrega o sistema coretamente. Ainda não tem solução :(
+Não instale  o que está em Drivers adicionais. A tela fica escura e não carrega o sistema coretamente. Para instalar o driver de video, siga os passos abaixo:
 
-Temos que aguardar a NVidia lançar a atualização do driver para essa versão do Ubuntu.
+- Remova o login automatico (se estiver habilitado);
+
+- Troque o GDM pelo Lightdm:
+
+```console
+sudo apt-get install lightdm
+```
+
+Selecione o `lightdm` como padrão.
+
+Reinicie e veja se o está fazendo login pelo lightdm.
+
+Abra um novo TTY (`Ctrl + Alt + F1`) e execute:
+
+```console
+sudo apt-get purge nvidia-*
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt-get update
+sudo apt-get install nvidia-364
+sudo reboot
+```
+
+Se tudo correu bem, o driver estará instalado corretamente!
+
+Para atualizar, execute no TTY:
+
+```console
+sudo apt-get install nvidia-367
+```
+
+ou escoha a versão mais recente e reinicie!
