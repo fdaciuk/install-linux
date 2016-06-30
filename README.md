@@ -59,6 +59,7 @@ Then, use `yaourt` -S <package-name> to install any package ;)
 - KeePassX
 - VLC
 - Git
+- PlayOnLinux
 - Chrome
 - Docker
 - Dropbox
@@ -81,6 +82,10 @@ Then, use `yaourt` -S <package-name> to install any package ;)
 - MongoDB
 
 > Enjoy it ;)
+
+## Other softwares to install
+- [Lightworks](https://www.lwks.com/) (video editor): http://downloads.lwks.com/lwks-12.6.0-amd64.deb
+- [Avocode](https://avocode.com/)
 
 ## After Install
 
