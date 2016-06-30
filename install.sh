@@ -137,7 +137,7 @@ if ! [[ -d "$HOME/.nvm" ]]; then
 fi
 ok "NVM"
 
-npm i -g nodemon
+npm i -g nodemon hmh clima
 ok "NodeJS global modules"
 
 if has_not apache2; then
@@ -217,11 +217,6 @@ if has_not redis-server; then
 fi
 ok "Redis Server"
 ok "PHP for WordPress"
-
-if has_not flowblade; then
-  sudo apt-get install flowblade
-fi
-ok "Flowblade (Video editor)"
 
 if ! [[ -d "$HOME/.oh-my-zsh" ]]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
