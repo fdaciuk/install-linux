@@ -29,7 +29,9 @@ sudo apt-get install -y \
   python-dbus \
   autojump \
   meld \
-  vlc browser-plugin-vlc
+  vlc browser-plugin-vlc \
+  git git-core \
+  playonlinux
 
 ok "System updated!"
 ok "XSel"
@@ -45,13 +47,8 @@ ok "KeePassX"
 ok "Autojump"
 ok "Meld"
 ok "VLC"
-
-if has_not git; then
-  sudo add-apt-repository -y ppa:git-core/ppa
-  sudo apt-get update
-  sudo apt-get install git -y
-fi
 ok "Git"
+ok "PlayOnLinux"
 
 if has_not pip; then
   sudo apt-get install python-pip python-dev build-essential
