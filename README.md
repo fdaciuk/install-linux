@@ -76,7 +76,6 @@ Then, use `yaourt` -S <package-name> to install any package ;)
 - WP-CLI
 - Composer
 - Redis Server
-- Flowblade (Video editor)
 - OH My ZSH
 - Heroku Toolbelt
 - MongoDB
@@ -86,6 +85,7 @@ Then, use `yaourt` -S <package-name> to install any package ;)
 ## Other softwares to install
 - [Lightworks](https://www.lwks.com/) (video editor): http://downloads.lwks.com/lwks-12.6.0-amd64.deb
 - [Avocode](https://avocode.com/)
+- [SQLEctron](https://sqlectron.github.io/)
 
 ## After Install
 
