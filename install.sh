@@ -137,7 +137,7 @@ if ! [[ -d "$HOME/.nvm" ]]; then
 fi
 ok "NVM"
 
-npm i -g nodemon hmh clima
+npm i -g nodemon hmh-cli clima
 ok "NodeJS global modules"
 
 if has_not apache2; then
