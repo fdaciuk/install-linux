@@ -86,6 +86,7 @@ Then, use `yaourt` -S <package-name> to install any package ;)
 - [Lightworks](https://www.lwks.com/) (video editor): http://downloads.lwks.com/lwks-12.6.0-amd64.deb
 - [Avocode](https://avocode.com/)
 - [SQLEctron](https://sqlectron.github.io/)
+- [RoboMongo](https://robomongo.org/)
 
 ## After Install
 
