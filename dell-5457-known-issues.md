@@ -70,4 +70,4 @@ Para atualizar, execute no TTY:
 sudo apt-get install nvidia-367
 ```
 
-ou escoha a versão mais recente e reinicie!
+ou escoha a versão mais recente, instale e reinicie!
