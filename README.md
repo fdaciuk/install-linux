@@ -55,7 +55,7 @@ Then, use `yaourt` -S <package-name> to install any package ;)
 - ZSH
 - Terminator
 - Curl
-- Vim
+- Vim (Gnome)
 - KeePassX
 - VLC
 - Git
