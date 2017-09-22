@@ -50,6 +50,18 @@ ok "VLC"
 ok "Git"
 ok "PlayOnLinux"
 
+# Sound Equalizer
+sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt-get update
+sudo apt-get install pulseaudio-equalizer
+
+# Headphone Bluetooth
+sudo apt-get install pulseaudio-module-bluetooth
+pactl load-module module-bluetooth-discover
+echo "Now, open bluetooth settings, and pair your device."
+echo "After that, open sound settings and select your device."
+echo "On 'profile' entry, choose 'High Fidelity Playback' and we're done."
+
 if has_not pip; then
   sudo apt-get install python-pip python-dev build-essential
   sudo pip install --upgrade pip 
