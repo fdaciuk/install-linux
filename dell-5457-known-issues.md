@@ -72,7 +72,7 @@ sudo apt-get install nvidia-367
 
 ou escoha a versão mais recente, instale e reinicie!
 
-## Audio
+## Problemas com Audio
 
 Tentar os passos desse [link](https://help.ubuntu.com/community/SoundTroubleshootingProcedure)
 
