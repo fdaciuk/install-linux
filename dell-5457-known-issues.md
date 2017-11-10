@@ -80,6 +80,7 @@ Tentar os passos desse [link](https://help.ubuntu.com/community/SoundTroubleshoo
 killall pulseaudio; rm -r ~/.config/pulse/* ; rm -r ~/.pulse*
 
 # wait ten seconds, then run this:
+pulseaudio -D
 pulseaudio -k
 ```
 
