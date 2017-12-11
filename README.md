@@ -147,6 +147,16 @@ Add entry on your `/etc/fstab` file:
 sudo sysctl -w vm.drop_caches=3
 ```
 
+**Update swappiness (how much percent of memory should be in use before using swap?)**
+
+To set swappiness to 10% (instead default of 60%):
+
+```console
+sudo sysctl vm.swappiness=10
+```
+
+Then, restart the system or run **clear swap** commands (see below).
+
 **Clear swap**
 
 ```console
