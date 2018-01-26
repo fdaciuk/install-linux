@@ -210,6 +210,15 @@ sudo update-grub
 exit
 ```
 
+## Use Jack instead pulseaudio
+
+```sh
+sudo apt-get install qjackctl pulseaudio-module-jack
+pactl load-module module-jack-sink
+pactl load-module module-jack-source
+pactl set-default-sink jack_out # Or open Sound Configuration and select "Jack"
+```
+
 ## License
 
 [MIT](https://github.com/fdaciuk/licenses/blob/master/MIT-LICENSE.md) © Fernando Daciuk
