@@ -19,3 +19,17 @@ git clone https://github.com/clnhub/rtl8192eu-linux.git
 cd rtl8192eu-linux/
 ./install_wifi.sh
 ```
+
+## Montagem automática de SSD do tipo NVME
+
+Se tiver mais de 2 SSD NVME, é preciso definir o file system usando UUID, ao invés do diretório em `/dev`. Para pegar o UUID do SSD, só rodar o comando abaixo:
+
+```
+ls -lha /dev/disk/by-uuid
+```
+
+Esse comando vai exibir o UUID de cada partição montada. Depois é s usar esse UUID no `/etc/fstab` para montar a partição na inicialização do sistema:
+
+```
+UUID=xxxx /media/storage ext4 defaults 0 0
+```
