@@ -1,4 +1,6 @@
-# Informações importantes para drivers no Pop_OS!
+# Pop_OS!
+
+> Informações importantes para instalções gerais no Pop_OS!
 
 ## Instalação do adaptador wireless TP-Link TL-WN8200ND
 
@@ -20,6 +22,8 @@ cd rtl8192eu-linux/
 ./install_wifi.sh
 ```
 
+---
+
 ## Montagem automática de SSD do tipo NVME
 
 Se tiver mais de 2 SSD NVME, é preciso definir o file system usando UUID, ao invés do diretório em `/dev`. Para pegar o UUID do SSD, só rodar o comando abaixo:
@@ -32,4 +36,21 @@ Esse comando vai exibir o UUID de cada partição montada. Depois é s usar esse
 
 ```
 UUID=xxxx /media/storage ext4 defaults 0 0
+```
+
+---
+
+## Configuração de atalhos do Gnome
+
+O Pop troca os atalhos padrão para maximizar janelas (Super + seta cima), tendo que usar o `Ctrl` junto. Para ajustar, só pesquisar por `Keyboard Shortcuts`, buscar pelos atalhos, e fazer as substituições:
+
+```
+Move to workspace above: Ctrl + Alt + Up
+Move to workspace below: Ctrl + Alt + Down
+Restore window: Super + Down
+Toggle maximization state: Super + Up
+View split on left: Super + Left
+View split on right: Super + Right
+Move window one workspace down: Shift + Ctrl + Alt + Down
+Move window one workspace up: Shift + Ctrl + Alt + Up
 ```
