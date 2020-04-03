@@ -54,3 +54,25 @@ View split on right: Super + Right
 Move window one workspace down: Shift + Ctrl + Alt + Down
 Move window one workspace up: Shift + Ctrl + Alt + Up
 ```
+
+---
+
+## Adicionar ícones no system tray
+
+Só seguir os procedimentos [desse link](https://pop.system76.com/docs/status-icons/), e reiniciar o PC.
+
+Instale a extensão:
+
+```
+sudo apt install gnome-shell-extension-appindicator
+```
+
+Reinicie o PC.
+
+Ative a extensão pelo Gnome Tweaks, ou com o comando:
+
+```
+gnome-shell-extension-prefs
+```
+
+O nome da extensão deve aparecer como **Ubuntu AppIndicators** ou **KStatusNotifierItem/AppIndicator Support**. 
