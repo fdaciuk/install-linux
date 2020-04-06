@@ -102,12 +102,6 @@ O nome da extensão deve aparecer como **Ubuntu AppIndicators** ou **KStatusNoti
 <leader>sv
 ```
 
-**Buscar arquivos com Fuzzy Finder (estilo Sublime Text)**
-
-```
-Ctrl + P
-```
-
 **Comentar linhas**
 
 ```
@@ -118,6 +112,18 @@ OBS.: para comentar várias linhas de uma vez, só selecionar no modo visual:
 - Pressione `v`;
 - Selecione as linhas, com `j` para selecionar abaixo ou `k` para selecionar acima;
 - Pressione as teclas para comentar (`<leader>/`).
+
+**Remover highlight das buscas**
+
+```
+<leader><space>
+```
+
+**Buscar arquivos com Fuzzy Finder (estilo Sublime Text)**
+
+```
+Ctrl + P
+```
 
 
 ### Tmux
