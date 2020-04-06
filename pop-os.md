@@ -49,8 +49,8 @@ Move to workspace above: Ctrl + Alt + Up
 Move to workspace below: Ctrl + Alt + Down
 Restore window: Super + Down
 Toggle maximization state: Super + Up
-View split on left: Super + Left
-View split on right: Super + Right
+View split on left: Super + Left (por algum motivo esse atalho deixa de funcionar ao reiniciar)
+View split on right: Super + Right (por algum motivo esse atalho deixa de funcionar ao reiniciar)
 Move window one workspace down: Shift + Ctrl + Alt + Down
 Move window one workspace up: Shift + Ctrl + Alt + Up
 ```
@@ -76,3 +76,116 @@ gnome-shell-extension-prefs
 ```
 
 O nome da extensão deve aparecer como **Ubuntu AppIndicators** ou **KStatusNotifierItem/AppIndicator Support**. 
+
+---
+
+## Terminal
+
+Atalhos usados no terminal (Vim, ZSH e Tmux):
+
+### ZSH
+- Plugin `zsh-autosuggestions` instalado. Para completar um comando, pressionar seta para direita ou a tecla `End`.
+
+### Vim (Neovim)
+- Alias `vim` e `vi` configurados para abrir o `nvim`;
+- Tecla `leader` é a vírgula;
+
+**Carregar arquivo de configuração do Neovim (Edit Vim)**
+
+```
+<leader>ev
+```
+
+**Dar reload no arquivo de configuração (Source Vim)**
+
+```
+<leader>sv
+```
+
+**Buscar arquivos com Fuzzy Finder (estilo Sublime Text)**
+
+```
+Ctrl + P
+```
+
+
+### Tmux
+- `prefix` definido como `Ctrl + j` ao invés do padrão `Ctrl + b`
+
+**Iniciar sessão zero**
+
+```
+tmux
+```
+
+**Iniciar sessão com nome**
+
+```
+tmux new -s <nome-da-sessao>
+```
+
+**Sair de todas as sessões sem destruir**
+
+```
+<prefix>d
+```
+
+**Exibir todas as sessões criadas**
+
+```
+tmux ls
+```
+
+**Acessar a sessão mais recente**
+
+```
+tmux a
+
+ou 
+
+tmux attach
+```
+
+**Acessar sessão pelo nome ou número**
+
+```
+tmux a -t <nome-ou-numero-da-sessao>
+```
+
+**Criar painel (split) vertical**
+
+```
+<prefix>%
+```
+
+**Criar painel (split) horizontal**
+
+```
+<prefix>"
+```
+
+**Navegar pelos painéis (usando as teclas de navegação do Vim: h,j,k,l)**
+
+```
+Alt + <tecla-de-navegacao (h,j,k ou l)>
+
+ou
+
+<prefix><tecla-de-navegacao>
+```
+
+**Criar janelas (abas)**
+
+```
+<prefix>c
+```
+
+**Navegar entre janelas**
+
+```
+Ctrl + Alt + <tecla-de-navegacao>
+
+ou 
+
+<prefix> <numero-da-janela>
+```
