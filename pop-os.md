@@ -141,7 +141,7 @@ tmux
 tmux new -s <nome-da-sessao>
 ```
 
-**Sair de todas as sessões sem destruir**
+**Sair do Tmux, mantendo as sessões**
 
 ```
 <prefix>d
@@ -217,6 +217,18 @@ ou
 
 ```
 <prefix>z
+```
+
+**Navegar entre sessões, com um preview de cada sessão**
+
+```
+<prefix>s
+```
+
+**Navegar entre sessões, com um preview de cada janela em cada sessão**
+
+```
+<prefix>w
 ```
 
 Após executar esse comando, é possível navegar no histórico com os comandos do vim.
