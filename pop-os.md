@@ -212,6 +212,7 @@ ou
 ```
 <prefix>[
 ```
+Após executar esse comando, é possível navegar no histórico com os comandos do vim.
 
 **Zoom in/out no painel atual**
 
@@ -230,5 +231,3 @@ ou
 ```
 <prefix>w
 ```
-
-Após executar esse comando, é possível navegar no histórico com os comandos do vim.
