@@ -80,8 +80,7 @@ O nome da extensão deve aparecer como **Ubuntu AppIndicators** ou **KStatusNoti
 ---
 
 ## Terminal
-
-Atalhos usados no terminal (Vim, ZSH e Tmux):
+> Atalhos usados no terminal (Vim, ZSH e Tmux):
 
 ### ZSH
 - Plugin `zsh-autosuggestions` instalado. Para completar um comando, pressionar seta para direita ou a tecla `End`.
