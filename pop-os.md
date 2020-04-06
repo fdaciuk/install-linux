@@ -1,6 +1,6 @@
 # Pop_OS!
 
-> Informações importantes para instalções gerais no Pop_OS!
+> Informações importantes para instalações gerais no Pop_OS!
 
 ## Instalação do adaptador wireless TP-Link TL-WN8200ND
 
