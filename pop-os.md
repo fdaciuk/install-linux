@@ -213,4 +213,10 @@ ou
 <prefix>[
 ```
 
+**Zoom in/out no painel atual**
+
+```
+<prefix>z
+```
+
 Após executar esse comando, é possível navegar no histórico com os comandos do vim.
