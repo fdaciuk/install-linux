@@ -85,6 +85,7 @@ O nome da extensão deve aparecer como **Ubuntu AppIndicators** ou **KStatusNoti
 ### ZSH
 - Plugin `zsh-autosuggestions` instalado. Para completar um comando, pressionar seta para direita ou a tecla `End`.
 
+
 ### Vim (Neovim)
 - Alias `vim` e `vi` configurados para abrir o `nvim`;
 - Tecla `leader` é a vírgula;
@@ -106,6 +107,17 @@ O nome da extensão deve aparecer como **Ubuntu AppIndicators** ou **KStatusNoti
 ```
 Ctrl + P
 ```
+
+**Comentar linhas**
+
+```
+<leader>/
+```
+
+OBS.: para comentar várias linhas de uma vez, só selecionar no modo visual:
+- Pressione `v`;
+- Selecione as linhas, com `j` para selecionar abaixo ou `k` para selecionar acima;
+- Pressione as teclas para comentar (`<leader>/`).
 
 
 ### Tmux
