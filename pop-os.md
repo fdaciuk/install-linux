@@ -188,3 +188,11 @@ ou
 
 <prefix> <numero-da-janela>
 ```
+
+**Rolagem (scroll)**
+
+```
+<prefix>[
+```
+
+Após executar esse comando, é possível navegar no histórico com os comandos do vim.
