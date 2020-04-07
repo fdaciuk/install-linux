@@ -142,7 +142,7 @@ sudo apt install psensor
 
 **GreenWithEnvy (monitoramento de GPUs Nvidia)**
 
-Como instalar: https://diolinux.com.br/2019/02/greenwithenvy-uma-nova-forma-de-voce-gerenciar-gpu-nvidia.html
+Como instalar: https://sempreupdate.com.br/greenwithenvy-saiba-instalar-no-ubuntu-fedora-debian-centos-e-opensuse-faca-overclock-em-gpus-nvidia/
 
 Instale o flatpak (se ainda não tiver instalado):
 ```
@@ -163,7 +163,26 @@ flatpak install flathub com.leinardi.gwe
 ---
 
 ## Terminal
-> Atalhos usados no terminal (Vim, ZSH e Tmux):
+
+### Instalação ZSH, Neovim e Tmux
+
+**ZSH e Oh-my-ZSH**
+
+Instale o ZSH:
+```
+sudo apt install zsh
+```
+
+Defina o ZSH como shell principal:
+```
+chsh -s $(which zsh)
+```
+
+Reinicie a sessão para entrar com o ZSH por padrão.
+
+---
+
+## Atalhos usados no terminal (Vim, ZSH e Tmux):
 
 ### ZSH
 - Plugin `zsh-autosuggestions` instalado. Para completar um comando, pressionar seta para direita ou a tecla `End`.
