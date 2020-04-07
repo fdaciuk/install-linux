@@ -95,6 +95,68 @@ sudo apt install snapd
 
 ---
 
+## Softwares adicionais para instalar
+
+**Alacritty (terminal que roda sobre a GPU)**
+
+```
+sudo add-apt-repository ppa:mmstick76/alacritty
+sudo apt udpate
+sudo apt install alacritty
+```
+
+**Psensor (software gráfico para sensores de temperatura do hardware)**
+
+Instalação do `lm-sensors`:
+```
+sudo apt install lm-sensors
+```
+
+Iniciar detecção do hardware (rode o comando abaixo e responda `yes` ou `no` para as questões:
+```
+sudo sensors-detect
+```
+
+Verifique se está funcionando:
+```
+sensors
+```
+
+O comando acima deve exibir algo como:
+```
+coretemp-isa-0000
+Adapter: ISA adapter
+Core 0:      +46.0C  (high = +76.0C, crit = +100.0C)
+
+coretemp-isa-0001
+Adapter: ISA adapter
+Core 1:      +44.0C  (high = +76.0C, crit = +100.0C)
+
+...
+```
+
+Depois, só instalar o `psensor`:
+```
+sudo apt install psensor
+```
+
+**GreenWithEnvy (monitoramento de GPUs Nvidia)**
+
+Como instalar: https://diolinux.com.br/2019/02/greenwithenvy-uma-nova-forma-de-voce-gerenciar-gpu-nvidia.html
+
+Instalar o flatpak (se ainda não tiver instalado):
+```
+sudo apt install flatpak
+```
+
+Reinicie a sessão, e então instale o GreenWithEnvy:
+
+```
+flatpak install flathub com.leinardi.gwe
+```
+
+---
+
 ## Terminal
 > Atalhos usados no terminal (Vim, ZSH e Tmux):
 
