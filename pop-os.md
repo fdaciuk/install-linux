@@ -144,9 +144,14 @@ sudo apt install psensor
 
 Como instalar: https://diolinux.com.br/2019/02/greenwithenvy-uma-nova-forma-de-voce-gerenciar-gpu-nvidia.html
 
-Instalar o flatpak (se ainda não tiver instalado):
+Instale o flatpak (se ainda não tiver instalado):
 ```
 sudo apt install flatpak
+```
+
+Adicione o flathub:
+```
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
 Reinicie a sessão, e então instale o GreenWithEnvy:
