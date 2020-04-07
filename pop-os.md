@@ -86,6 +86,15 @@ O nome da extensão deve aparecer como **Ubuntu AppIndicators** ou **KStatusNoti
 
 ---
 
+## Suporte para apps Snap
+
+```
+sudo apt update
+sudo apt install snapd
+```
+
+---
+
 ## Terminal
 > Atalhos usados no terminal (Vim, ZSH e Tmux):
 
