@@ -2,6 +2,13 @@
 
 > Informações importantes para instalações gerais no Pop_OS!
 
+## Passo a passo inicial
+
+- Instalar o sistema;
+- Se no tiver conexão com internet, usar Android com USB Tethering conectado em uma rede wifi;
+- Atualizar o sistema: `sudo apt update && sudo apt upgrade -y`;
+- Instalar adaptador wireless (próximo passo).
+
 ## Instalação do adaptador wireless TP-Link TL-WN8200ND
 
 > Link: https://askubuntu.com/questions/1078953/drivers-for-tp-link-tl-wn8200nd-v2
