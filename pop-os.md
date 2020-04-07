@@ -105,6 +105,8 @@ sudo apt udpate
 sudo apt install alacritty
 ```
 
+Copie o arquivo `alacritty.yml` para a raiz da sua /home/seu_usuario.
+
 **Psensor (software gráfico para sensores de temperatura do hardware)**
 
 Instalação do `lm-sensors`:
@@ -164,6 +166,16 @@ flatpak install flathub com.leinardi.gwe
 
 ## Terminal
 
+### Instalação do Neovim
+
+```
+sudo apt install neovim
+```
+
+Crie o arquivo de configuração `~/.config/nvim/init.vim`, copiando aqui do repo.
+
+Ao iniciar o nvim (com o comando `nvim` ou só `vim`), será pedida a chave da API do wakatime. Acesse [sua conta](https://wakatime.com/vim) e coloque a chave ali.
+
 ### Instalação ZSH, Neovim e Tmux
 
 **ZSH e Oh-my-ZSH**
@@ -179,6 +191,81 @@ chsh -s $(which zsh)
 ```
 
 Reinicie a sessão para entrar com o ZSH por padrão.
+
+Ao iniciar o terminal, responda a pergunta com a opção 2.
+
+Instale o oh-my-zsh:
+```
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+Instale o tema `avit-da2k`:
+https://github.com/fdaciuk/avit-da2k
+
+
+Instale o plugin zsh-autosuggestions:
+https://github.com/zsh-users/zsh-autosuggestions
+
+```
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+Instale o plugin zsh-wakatime:
+https://github.com/wbingli/zsh-wakatime
+
+É necessário ter o `pip` instalado. Para instalá-lo para a versão 3 do Python:
+
+```
+sudo apt install python3-pip
+```
+
+Após instalar, reinicie o terminal para ter acesso ao comando `pip3`.
+
+Instale a CLI do wakatime:
+
+```
+pip install wakatime
+```
+
+Reinicie o terminal novamente.
+
+Instale o zsh-wakatime:
+
+```
+cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/wbingli/zsh-wakatime.git
+```
+
+Adicione no `~/.zshrc`, na parte de plugins, o autosuggestion e o wakatime:
+
+```
+plugins=(git zsh-autosuggestions zsh-wakatime)
+```
+
+Se o arquivo foi copiado aqui do repo, já deve estar com essa entrada.
+
+Após a instalação, reinicie o terminal, ou execute:
+
+```
+sorce ~/.zshrc
+```
+
+### Instalação do Tmux
+https://github.com/tmux/tmux
+
+```
+sudo apt install tmux
+```
+
+Para instalar o oh-my-tmux:
+https://github.com/gpakosz/.tmux
+
+Importante lembrar de ativar o Powerline para funcionar corretamente:
+https://github.com/gpakosz/.tmux#enabling-the-powerline-look
+
+Aqui nesse link você encontra várias fontes com suporte para Powerline:
+https://github.com/powerline/fonts
+
+Clone o repositório e execute o script `install.sh`. Agora reinicie o terminal e pronto!
 
 ---
 
