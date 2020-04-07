@@ -85,6 +85,14 @@ O nome da extensão deve aparecer como **Ubuntu AppIndicators** ou **KStatusNoti
 ### ZSH
 - Plugin `zsh-autosuggestions` instalado. Para completar um comando, pressionar seta para direita ou a tecla `End`.
 
+**Copiar arquivos (usar no lugar do cp -R)**
+
+Esse comando usa `rsync` por baixo dos panos para copiar arquivos. A diferença do `cp` é que ele vai exibir o progresso do que está acontecendo.
+
+```
+copy <origem> <destino>
+```
+
 
 ### Vim (Neovim)
 - Alias `vim` e `vi` configurados para abrir o `nvim`;
