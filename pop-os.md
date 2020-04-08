@@ -162,6 +162,30 @@ Reinicie a sessão, e então instale o GreenWithEnvy:
 flatpak install flathub com.leinardi.gwe
 ```
 
+**Postgres**
+https://www.postgresql.org/download/linux/ubuntu/
+
+```
+sudo apt install postgresql postgresql-contrib pgadmin3
+```
+
+Criar senha para o usuário postgres:
+
+```
+sudo su - postgres
+psql
+```
+
+Dentro do psql, digitar `\password` e entrar com a senha.
+
+Sair com `\q`.
+
+Depois disso, só entrar com:
+
+```
+psql -h localhost -U postgres
+```
+
 ---
 
 ## Terminal
