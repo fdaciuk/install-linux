@@ -107,6 +107,12 @@ sudo apt install alacritty
 
 Copie o arquivo `alacritty.yml` para a raiz da sua /home/seu_usuario.
 
+**Htop**
+
+```
+sudo apt install htop
+```
+
 **Psensor (software gráfico para sensores de temperatura do hardware)**
 
 Instalação do `lm-sensors`:
@@ -182,6 +188,12 @@ Também só baixar o `.deb` e executá-lo, ou clicando duas vezes, ou com o coma
 
 ```
 sudo dpkg -i <caminho-do-arquivo.deb>
+```
+
+**Insomnia**
+
+```
+sudo snap install insomnia
 ```
 
 **Postgres**
