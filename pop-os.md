@@ -391,7 +391,7 @@ Ctrl + P
 - Move para o buffer anterior com "gp"
 - Move para o próximo buffer com "gn"
 - Lista todos os buffers com "gl"
-- Lista todos os buffers com "gb" e aceita um novo buffer como argumento
+- Lista todos os buffers com "go" e aceita um novo buffer como argumento
 
 
 ### Tmux
