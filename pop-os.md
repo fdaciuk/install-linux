@@ -386,6 +386,13 @@ OBS.: para comentar várias linhas de uma vez, só selecionar no modo visual:
 Ctrl + P
 ```
 
+**Navegar entre buffers**
+
+- Move para o buffer anterior com "gp"
+- Move para o próximo buffer com "gn"
+- Lista todos os buffers com "gl"
+- Lista todos os buffers com "gb" e aceita um novo buffer como argumento
+
 
 ### Tmux
 - `prefix` definido como `Ctrl + j` ao invés do padrão `Ctrl + b`
