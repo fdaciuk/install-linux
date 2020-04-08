@@ -162,6 +162,16 @@ Reinicie a sessão, e então instale o GreenWithEnvy:
 flatpak install flathub com.leinardi.gwe
 ```
 
+**Conky (outros monitoramentos do hardware)**
+
+Instale o conky e o appmenu-gtk3-module:
+
+```
+sudo apt install conky appmenu-gtk3-module
+```
+
+Copie o diretório `conky` daqui do repo para dentro do diretório `~/.config`. Para iniciar o conky, execute o arquivo que está em `bin/start-conky`.
+
 **Postgres**
 https://www.postgresql.org/download/linux/ubuntu/
 
