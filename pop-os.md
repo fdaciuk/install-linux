@@ -172,6 +172,18 @@ sudo apt install conky appmenu-gtk3-module
 
 Copie o diretório `conky` daqui do repo para dentro do diretório `~/.config`. Para iniciar o conky, execute o arquivo que está em `bin/start-conky`.
 
+**Telegram Desktop**
+
+Só baixar o executável, colocar em qualquer lugar que você queira manter, e executar. Automaticamente será gerado um arquivo `telegramdesktop.desktop`, com um atalho no Gnome.
+
+**Slack Desktop**
+
+Também só baixar o `.deb` e executá-lo, ou clicando duas vezes, ou com o comando:
+
+```
+sudo dpkg -i <caminho-do-arquivo.deb>
+```
+
 **Postgres**
 https://www.postgresql.org/download/linux/ubuntu/
 
