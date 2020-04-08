@@ -113,6 +113,12 @@ Copie o arquivo `alacritty.yml` para a raiz da sua /home/seu_usuario.
 sudo apt install htop
 ```
 
+**NVM**
+https://github.com/nvm-sh/nvm
+
+**Yarn**
+https://classic.yarnpkg.com/en/docs/install#debian-stable
+
 **Psensor (software gráfico para sensores de temperatura do hardware)**
 
 Instalação do `lm-sensors`:
