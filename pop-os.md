@@ -236,9 +236,23 @@ psql -h localhost -U postgres
 sudo apt install neovim
 ```
 
-Crie o arquivo de configuração `~/.config/nvim/init.vim`, copiando aqui do repo.
+- Instale o `curl` e `wget` se ainda não o tiver feito;
+- Crie o diretório de configuração do neovim em `~/.config/nvim`;
+- Instale o [vim plug](https://github.com/junegunn/vim-plug) para gerenciamento de plugins, no diretório `~/.config/nvim/autoload`, com o comando:
 
-Ao iniciar o nvim (com o comando `nvim` ou só `vim`), será pedida a chave da API do wakatime. Acesse [sua conta](https://wakatime.com/vim) e coloque a chave ali.
+```
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+- Crie o arquivo de configuração `~/.config/nvim/init.vim`, copiando aqui do repo;
+- Inicie o neovim com o comando `nvim`;
+- Instale os plugins, com o comando `:PlugInstall` (dentro do vim);
+- Feche o vim e abra novamente.
+
+Ao iniciar o nvim (com o comando `nvim`, ou só `vim`, se já tiver configurado o alias para isso), será pedida a chave da API do wakatime. Acesse [sua conta](https://wakatime.com/vim) e cole a chave ali.
+
+Se a barra de status do vim parecer "estranha", e não tiver as setinhas do Powerline, mais abaixo tem instruções de como instalar as fontes do Powerline corretamente. Teremos Powerline tanto no vim como no Tmux :)
 
 ### Instalação ZSH, Neovim e Tmux
 
