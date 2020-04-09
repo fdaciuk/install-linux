@@ -388,10 +388,22 @@ Ctrl + P
 
 **Navegar entre buffers**
 
-- Move para o buffer anterior com "gp"
-- Move para o próximo buffer com "gn"
-- Lista todos os buffers com "gl"
-- Lista todos os buffers com "go" e aceita um novo buffer como argumento
+- `go` = Lista todos os buffers e aceita um novo buffer como argumento
+- `gh` = Lista todos os buffers e aceita um novo buffer como argumento, que será aberto em um split horizontal
+- `gv` = Lista todos os buffers e aceita um novo buffer como argumento, que será aberto em um split vertical
+- `Ctrl + 6` = Alterna entre os dois últimos buffers
+
+**Símbolos usados na lista de buffers**
+
+- `%`: buffer na janela atual
+- `#`: buffer que pode ser alternado com o atual, usando `Ctrl + 6`
+- `a`: buffer ativo, carregado e visível
+- `h`: buffer oculto, carregado, mas não visível
+- `-`: um buffer que não pode ser modificado _(modifiable off)_
+- `=`: um buffer somente leitura
+- `+`: um buffer com alterações que precisam ser salvas
+- `x`: um buffer com erros de leitura
+- ` `: se não houver um indicador no buffer, significa que ele ainda não foi carregado
 
 
 ### Tmux
