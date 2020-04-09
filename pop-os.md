@@ -419,6 +419,16 @@ Ctrl + P
 - `x`: um buffer com erros de leitura
 - ` `: se não houver um indicador no buffer, significa que ele ainda não foi carregado
 
+**Zoom in ([z]oom [in])**
+```
+zin
+```
+
+**Zoom out ([z]oom [n]ot [i]n)**
+> Não use `zo` aqui pois conflita com o atalho de folding.
+```
+zni
+```
 
 ### Tmux
 - `prefix` definido como `Ctrl + j` ao invés do padrão `Ctrl + b`
