@@ -402,6 +402,7 @@ Ctrl + P
 
 **Navegar entre buffers**
 
+- `Ctrl + N` = Abre lista de buffers com o fzf
 - `go` = Lista todos os buffers e aceita um novo buffer como argumento
 - `gh` = Lista todos os buffers e aceita um novo buffer como argumento, que será aberto em um split horizontal
 - `gv` = Lista todos os buffers e aceita um novo buffer como argumento, que será aberto em um split vertical
