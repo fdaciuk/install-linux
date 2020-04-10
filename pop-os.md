@@ -230,6 +230,8 @@ psql -h localhost -U postgres
 
 ## Terminal
 
+> Se estiver usando o terminal padrão do Gnome, você pode exportar / importar suas configurações seguindo as orientações [desse gist](https://gist.github.com/fdaciuk/9ec4d8afc32063a6f74a21f8308e3807).
+
 ### Instalação do Neovim
 
 ```
