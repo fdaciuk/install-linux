@@ -480,12 +480,20 @@ tmux a -t <nome-ou-numero-da-sessao>
 
 ```
 <prefix>\
+
+ou
+
+<prefix>%
 ```
 
 **Criar painel (split) horizontal**
 
 ```
 <prefix>-
+
+ou
+
+<prefix>"
 ```
 
 **Navegar pelos painéis (usando as teclas de navegação do Vim: h,j,k,l)**
@@ -496,6 +504,15 @@ Alt + <tecla-de-navegacao (h,j,k ou l)>
 ou
 
 <prefix><tecla-de-navegacao>
+```
+
+**Alterar tamanho dos painéis**
+
+```
+<prefix>H
+<prefix>J
+<prefix>K
+<prefix>L
 ```
 
 **Criar janelas (abas)**
