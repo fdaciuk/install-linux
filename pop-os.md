@@ -434,7 +434,7 @@ zni
 ```
 
 ### Tmux
-- `prefix` definido como `Ctrl + j` ao invés do padrão `Ctrl + b`
+- `prefix` definido como `Ctrl + a` ou `Ctrl + b`
 
 **Iniciar sessão zero**
 
@@ -479,13 +479,13 @@ tmux a -t <nome-ou-numero-da-sessao>
 **Criar painel (split) vertical**
 
 ```
-<prefix>%
+<prefix>\
 ```
 
 **Criar painel (split) horizontal**
 
 ```
-<prefix>"
+<prefix>-
 ```
 
 **Navegar pelos painéis (usando as teclas de navegação do Vim: h,j,k,l)**
@@ -502,6 +502,12 @@ ou
 
 ```
 <prefix>c
+```
+
+**Criar nova sessão**
+
+```
+<prefix>Ctrl + c
 ```
 
 **Navegar entre janelas**
@@ -527,14 +533,34 @@ Após executar esse comando, é possível navegar no histórico com os comandos 
 <prefix>z
 ```
 
-**Navegar entre sessões, com um preview de cada sessão**
+**Navegar entre sessões, com um preview de cada sessão, janela e painel**
 
 ```
 <prefix>s
 ```
 
-**Navegar entre sessões, com um preview de cada janela em cada sessão**
+**Renomear janela**
 
 ```
-<prefix>w
+<prefix>,
+
+ou 
+
+<prefix>:rename-window
+```
+
+**Renomear sessão**
+
+```
+<prefix>$
+
+ou 
+
+<prefix>:rename-session
+```
+
+**Listar todas as keybindings definidas no tmux**
+
+```
+tmux list-keys
 ```
