@@ -33,7 +33,7 @@ cd rtl8192eu-linux/
 
 ## Como usar o roteador TP-Link Archer C6 1200AC como adaptador wireless ou repetidor, via wireless, sem conectar cabo no modem principal
 
-> A ideia aqui é utilizar o roteador TP-Link em um PC que não tem placa wireless, ligando direto na placa de rede da placa mãe
+> A ideia aqui é utilizar o roteador TP-Link em um PC que não tem placa wireless, ligando direto na placa de rede da placa mãe, consumindo a wifi direto do roteador principal, sem usar cabos para conectar os dois roteadores.
 
 **Importante:**
 _Esse roteador da TP-Link é Gigabit, ou seja, suporta velocidades acima de 100mbs (até 1000mbs). Se você tem uma internet contratada com essa velocidade ou superior, e quer usufruir de toda essa velocidade, seu roteador principal precisa conseguir servir o wifi a 5ghz acima dessa velocidade, a placa de rede do seu PC também precisa ser Gigabit (10/100/1000) para suportar velocidades acima de 100mbs, e você também vai precisar de um cabo de rede Gigabit, para ligar no PC (o cabo acompanha o roteador da TP-Link)._
