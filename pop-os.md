@@ -31,6 +31,35 @@ cd rtl8192eu-linux/
 
 ---
 
+## Como usar o roteador TP-Link Archer C6 1200AC como adaptador wireless ou repetidor, via wireless, sem conectar cabo no modem principal
+
+> A ideia aqui é utilizar o roteador TP-Link em um PC que não tem placa wireless, ligando direto na placa de rede da placa mãe
+
+**Importante:**
+_Esse roteador da TP-Link é Gigabit, ou seja, suporta velocidades acima de 100mbs (até 1000mbs). Se você tem uma internet contratada com essa velocidade ou superior, e quer usufruir de toda essa velocidade, seu roteador principal precisa conseguir servir o wifi a 5ghz acima dessa velocidade, a placa de rede do seu PC também precisa ser Gigabit (10/100/1000) para suportar velocidades acima de 100mbs, e você também vai precisar de um cabo de rede Gigabit, para ligar no PC (o cabo acompanha o roteador da TP-Link)._
+
+Esse roteador da TP-Link não funciona muito bem em 2.4ghz. Ao menos comigo, a velocidade da internet fica em torno de 20% do valor total, e dificilmente passa disso. Então vou mostrar como configurá-lo para ser usado na frequência de 5ghz.
+
+Faça a configuração inicial do TP-Link, com ele conectado ao PC pelo cabo de rede. Quando for para selecionar o tipo de acesso, deixe como _Router_. **Não mude** para _Access Point_. 
+
+Ao acessar a interface do roteador, a primeira coisa a fazer é colocar o IP dele no mesma faixa de IP do roteador principal. Exemplo: o IP padrão do TP-Link é 192.168.0.1, e o meu roteador principal está em 192.168.100.1. Vamos deixar o TP-Link no IP 192.168.100.2.
+
+Para isso, clique na aba _Advanced_, depois no menu _Network_, na opção _LAN_. Modifique o _IP Address_ para ficar na mesma faixa do seu roteador principal. No meu caso, o valor desse campo vai ser 192.168.100.2. Ao clicar em _Save_, o roteador irá reiniciar. Aguarde a nova tela de login, agora no novo endereço.
+
+Com os dois roteadores na mesma faixa de IP, agora vamos conectar o TP-Link na wifi do roteador principal. Clique novamente na guia _Advanced_, vá até o menu _System Tools_ e clique em _System Parameters_.
+
+Role até a sessão _5GHz WDS_, clique para habilitar o checkbox _Enable WDS Bridging_, depois clique no botão _Survey_. As redes 5ghz disponíveis devem aparecer. Se a sua rede não aparecer, e seu modem for igual ao meu, tem uma configuração extra que precisa ser feita no roteador principal.
+
+Meu roteador principal é um Huawei HG8245Q2. Para que eu pudesse ver a rede 5ghz à partir do TP-Link, eu precisei habilitar uma opção em _WLAN > Wifi Coverage Management_ chamada "_Synchronize WLAN to the external AP"_. É o primeiro checkbox que aparece nessa tela. _AP_ significa _Access Point_, que no caso, é o segundo roteador.
+
+Ao fazer isso, esperei reiniciar o roteador principal, e então ao cliar em _Survey_ eu consegui ver minha rede 5G. Conecte na rede clicando no link _Choose_, coloque a senha da sua rede 5ghz e clique em _Save_.
+
+Com isso feito, só falta mais um passo: - **lembrando que esse passo deve ser feito só ao final de toda a configuração** - clique em _Network > DHCP Server_ e desabilite a opção _Enable DHCP Server_. Salve e reinicie o roteador, clicando no botão _Reboot_ no topo da página.
+
+Ao reiniciar, você já deve estar com acesso a internet \o/
+
+---
+
 ## Montagem automática de SSD do tipo NVME
 
 Se tiver mais de 2 SSD NVME, é preciso definir o file system usando UUID, ao invés do diretório em `/dev`. Para pegar o UUID do SSD, só rodar o comando abaixo:
