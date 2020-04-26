@@ -610,3 +610,9 @@ ou
 ```
 tmux list-keys
 ```
+
+## Solução de problemas
+
+Ao tentar gravar no OBS com uma placa Nvidia, as vezes fica passando uma imagem na tela da janela que está atrás. [Nesse link](https://obsproject.com/forum/threads/screen-tearing-obs-preview.25977/) contém a descrição do problema.
+
+Para resolver, só entrar nas configs da Nvidia (Nvidia X Server Settings), selecionar "OpenGL Settings" e desligar a opção "Allow Flipping".
