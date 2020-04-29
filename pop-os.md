@@ -1,6 +1,6 @@
-# Pop_OS!
+# Pop!\_OS
 
-> Informações importantes para instalações gerais no Pop_OS!
+> Informações importantes para instalações gerais no Pop!\_OS
 
 ## Passo a passo inicial
 
