@@ -91,6 +91,7 @@ Move to workspace above: Ctrl + Alt + Up
 Move to workspace below: Ctrl + Alt + Down
 Move window one workspace down: Shift + Ctrl + Alt + Down
 Move window one workspace up: Shift + Ctrl + Alt + Up
+Lock screen: Super + L
 Maximize window: Super + Up
 Restore window: Super + Down
 View split on left: Super + Left
