@@ -1,6 +1,6 @@
 # Pop!\_OS
 
-> Informações importantes para instalações gerais no Pop!\_OS
+> Informações importantes para instalações gerais no Pop!\_OS v20.04
 
 ## Passo a passo inicial
 
@@ -81,19 +81,26 @@ UUID=xxxx /media/storage ext4 defaults 0 0
 O Pop troca os atalhos padrão para maximizar janelas (Super + seta cima), tendo que usar o `Ctrl` junto. Para ajustar, só pesquisar por `Keyboard Shortcuts`, buscar pelos atalhos, e fazer as substituições:
 
 ```
+Switch focus to left monitor: Disabled
+Switch focus to right monitor: Disabled
+Switch focus to window down: Disabled
+Switch focus to window left: Disabled
+Switch focus to window right: Disabled
+Switch focus to window up: Disabled
 Move to workspace above: Ctrl + Alt + Up
 Move to workspace below: Ctrl + Alt + Down
-Restore window: Super + Down
-Toggle maximization state: Super + Up
-View split on left: Super + Left (por algum motivo esse atalho deixa de funcionar ao reiniciar)
-View split on right: Super + Right (por algum motivo esse atalho deixa de funcionar ao reiniciar)
 Move window one workspace down: Shift + Ctrl + Alt + Down
 Move window one workspace up: Shift + Ctrl + Alt + Up
+Maximize window: Super + Up
+Restore window: Super + Down
+View split on left: Super + Left
+View split on right: Super + Right
+
 ```
 
 ---
 
-## Adicionar ícones no system tray
+## Adicionar ícones no system tray (válido somente para a v19.10. Na v20.04 isso já vem isntalado).
 
 Só seguir os procedimentos [desse link](https://pop.system76.com/docs/status-icons/), e reiniciar o PC.
 
@@ -127,6 +134,7 @@ sudo apt install snapd
 ## Softwares adicionais para instalar
 
 **Alacritty (terminal que roda sobre a GPU)**
+> Importante lembrar que, até o momento, o Alacritty não suporta emojis.
 
 ```
 sudo add-apt-repository ppa:mmstick76/alacritty
@@ -192,7 +200,7 @@ Instale o flatpak (se ainda não tiver instalado):
 sudo apt install flatpak
 ```
 
-Adicione o flathub:
+Adicione o flathub (só para a v19.10. Já vem instalado na v20.04):
 ```
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
@@ -235,7 +243,7 @@ sudo snap install insomnia
 https://www.postgresql.org/download/linux/ubuntu/
 
 ```
-sudo apt install postgresql postgresql-contrib pgadmin3
+sudo apt install postgresql postgresql-contrib dbeaver-ce
 ```
 
 Criar senha para o usuário postgres:
@@ -389,6 +397,12 @@ Esse comando usa `rsync` por baixo dos panos para copiar arquivos. A diferença 
 
 ```
 copy <origem> <destino>
+```
+
+**Copiar conteúdo de arquivos para o clipboard
+
+```
+copy-to-cliboard <caminho-do-arquivo>
 ```
 
 
