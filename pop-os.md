@@ -429,6 +429,10 @@ copy-to-cliboard <caminho-do-arquivo>
 <leader>/
 ```
 
+**Comentar várias linhas sem usar o modo visual**
+
+- `10<leader>/`: comenta 10 linhas conta à partir da linha atual
+
 OBS.: para comentar várias linhas de uma vez, só selecionar no modo visual:
 - Pressione `v`;
 - Selecione as linhas, com `j` para selecionar abaixo ou `k` para selecionar acima;
@@ -443,16 +447,34 @@ OBS.: para comentar várias linhas de uma vez, só selecionar no modo visual:
 **Buscar arquivos com Fuzzy Finder (estilo Sublime Text)**
 
 ```
-Ctrl + P
+Ctrl + p
+```
+
+**Buscar buffers abertos com o Fuzzy Finder**
+
+```
+Ctrl + o
 ```
 
 **Navegar entre buffers**
 
-- `Ctrl + N` = Abre lista de buffers com o fzf
 - `go` = Lista todos os buffers e aceita um novo buffer como argumento
 - `gh` = Lista todos os buffers e aceita um novo buffer como argumento, que será aberto em um split horizontal
 - `gv` = Lista todos os buffers e aceita um novo buffer como argumento, que será aberto em um split vertical
-- `Ctrl + 6` = Alterna entre os dois últimos buffers
+- `Ctrl + 6` ou `gp` = Alterna entre os dois últimos buffers
+
+**Rodar um comando em todos os buffers**
+
+```
+:bufdo <comando>
+```
+
+Exemplo:
+
+- `:bd`: fecha o buffer atual
+- `:bufdo bd`: fecha todos os buffers
+- `:e!`: atualiza o buffer atual, ignorando as alterações não salvas
+- `:bufdo e!`: atualiza todos os buffers, ignorando as alterações não salvas
 
 **Símbolos usados na lista de buffers**
 
@@ -476,6 +498,11 @@ zin
 ```
 zni
 ```
+
+**Indentação de várias linhas**
+
+- `44>>`: indenta 44 linhas
+- `10<<`: volta a indentação de 10 linhas
 
 ### Tmux
 - `prefix` definido como `Ctrl + a` ou `Ctrl + b`
