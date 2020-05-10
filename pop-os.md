@@ -505,7 +505,7 @@ zin
 zni
 ```
 
-**Indentação de várias linhas**
+**Indentação de várias linhas à partir da atual (onde o cursor está)**
 
 - `44>>`: indenta 44 linhas
 - `10<<`: volta a indentação de 10 linhas
