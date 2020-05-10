@@ -406,7 +406,7 @@ Esse comando usa `rsync` por baixo dos panos para copiar arquivos. A diferença 
 copy <origem> <destino>
 ```
 
-**Copiar conteúdo de arquivos para o clipboard
+**Copiar conteúdo de arquivos para o clipboard**
 
 ```
 copy-to-cliboard <caminho-do-arquivo>
@@ -509,6 +509,21 @@ zni
 
 - `44>>`: indenta 44 linhas
 - `10<<`: volta a indentação de 10 linhas
+
+**Modificar valores (find & replace)**
+
+1. Faça a busca do valor com `/valor`;
+2. Pressione `cgn` no primeiro local onde você quer substituir;
+3. Digite o novo valor;
+4. Navegue para o próximo valor com `n` e use o `.` para substituir;
+5. Repita o passo `4` até substituir todas as entradas que você quiser substituir.
+
+Obs.: O comando `cgn` significa:
+- `c`: Aguarda um movimento após esse comando. O movimento que vier após o `c` será deletado, e então entrará no modo INSERT.
+- `gn`: Seleciona o _pattern_ mais recente usado na busca, usando o modo VISUAL. Vai servir como movimento para o atalho anterior `c`.
+- Em resumo: a palavra buscada vai ser deletada, e o vim vai entrar no modo de inserção para digitar a sibstituição.
+- O `n` é para navegar para o próximo match do valor buscado;
+- O `.` repete o último comando (no caso, o `cgn` e a nova palavra).
 
 ### Tmux
 - `prefix` definido como `Ctrl + a` ou `Ctrl + b`
