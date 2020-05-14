@@ -99,6 +99,9 @@ View split on right: Super + Right
 
 ```
 
+## Definir input e output padrões no pulseaudio (quando não salva a alteração após o reboot)
+https://rastating.github.io/setting-default-audio-device-in-ubuntu-18-04/
+
 ---
 
 ## Adicionar ícones no system tray (válido somente para a v19.10. Na v20.04 isso já vem isntalado).
