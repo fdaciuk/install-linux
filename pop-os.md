@@ -529,7 +529,7 @@ Obs.: O comando `cgn` significa:
 - O `.` repete o último comando (no caso, o `cgn` e a nova palavra).
 
 ### Tmux
-- `prefix` definido como `Ctrl + a` ou `Ctrl + b`
+- `prefix` definido como `Ctrl + b`
 
 **Iniciar sessão zero**
 
@@ -630,6 +630,12 @@ Ctrl + Alt + <tecla-de-navegacao>
 ou 
 
 <prefix> <numero-da-janela>
+```
+
+**Rotacionar / mover painéis**
+
+```
+<prefix>{
 ```
 
 **Rolagem (scroll)**
