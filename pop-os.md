@@ -546,6 +546,12 @@ posicionar o cursor na linha onde inicia,e pressionar `zc` (close fold) ou `za`.
 1. Selecione as linhas da função que você quer fazer o fold, e crie o fold com `zfat` (ou `zfit`). Depois é só 
 usar os comandos acima para abrir / fechar o fold conforme a necessidade :)
 
+**Fechar todos os foldings**
+
+Para fechar todos os foldings criados, só usar `zM`.
+
+---
+
 ### Tmux
 - `prefix` definido como `Ctrl + b`
 
