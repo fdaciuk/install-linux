@@ -512,6 +512,25 @@ zni
 
 - `44>>`: indenta 44 linhas
 - `10<<`: volta a indentação de 10 linhas
+- `>at`: Indenta tags HTML (ou JSX) (`a`: _around_, `t`: _tag_)
+- `>i{`: Indenta dentro (`i` de _inside_) das chaves. O cursor deve estar dentro das chaves.
+
+**Exemplos de indentação:**
+
+Função de exemplo em JavaScript:
+
+```js
+function sum () {
+  const a = 1
+  const b = 2
+  return a + b
+}
+```
+
+Colocando o cursor em qualquer linha da função, e pressionando `>i{`, todo o conteúdo dentro das chaves será indentado.
+Esse mesmo atalho pode ser usado com qualquer par de chaves, colchetes ou parênteses.
+
+Para indentar **inclusive** a função, só usar o `a` (_around_) ao invés do `i` (_inside_).
 
 **Modificar valores (find & replace)**
 
