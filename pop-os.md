@@ -532,6 +532,12 @@ Esse mesmo atalho pode ser usado com qualquer par de chaves, colchetes ou parên
 
 Para indentar **inclusive** a função, só usar o `a` (_around_) ao invés do `i` (_inside_).
 
+**Observação importante:** O `i` e `at` funcionam também para outros comandos que esperam movimentos:
+- `c`, que aguarda um movimento para deletar e abrir para edição;
+- `d`, que aguarda um movimento para deletar;
+- `v`, que aguarda um  movimento para selecionar no modo visual;
+- etc.
+
 **Modificar valores (find & replace)**
 
 1. Faça a busca do valor com `/valor`;
