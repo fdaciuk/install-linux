@@ -528,6 +528,24 @@ Obs.: O comando `cgn` significa:
 - O `n` é para navegar para o próximo match do valor buscado;
 - O `.` repete o último comando (no caso, o `cgn` e a nova palavra).
 
+#### Folding
+
+Sabe aqueles editores que tem um botão de "-" ao lado da linha onde começa uma função ou tag HTML (ou JSX)? E quando você clica, todo o código dentro dessa função é "compactado", ou "fechado", mostrando somente as linhas antes e depois desse código? Isso se chama **folding!**. E dá pra fazer isso no Vim :D
+
+**Folding em tags HTML ou JSX**
+
+1. Posicione o cursor a linha que inicia a tag onde você quer fazer o fold;
+2. Execute o comando `zaf`. Isso vai criar um "fold" para aquela tag, e vai trazer fechado.
+3. Para abrir, pode usar `za` (toggle fold) ou `zo` (open fold).
+4. Para cada novo fold, é preciso usar o `zaf`, senão, ao usar os comandos para abrir / fechar, esses serão aplicados
+sempre no último fold criado. Após ter criado um "fold", sempre que quiser abrir / fechar algum em específico, é só
+posicionar o cursor na linha onde inicia,e pressionar `zc` (close fold) ou `za`.
+
+**Folding em funções**
+
+1. Selecione as linhas da função que você quer fazer o fold, e crie o fold com `zfat` (ou `zfit`). Depois é só 
+usar os comandos acima para abrir / fechar o fold conforme a necessidade :)
+
 ### Tmux
 - `prefix` definido como `Ctrl + b`
 
