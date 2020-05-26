@@ -453,10 +453,16 @@ OBS.: para comentar várias linhas de uma vez, só selecionar no modo visual:
 <leader><space>
 ```
 
-**Buscar arquivos com Fuzzy Finder (estilo Sublime Text)**
+**Buscar arquivos com fzf - Fuzzy Finder (estilo Sublime Text)**
 
 ```
 Ctrl + p
+```
+
+**Buscar arquivos com fzf, baseado na árvore do git**
+
+```
+Ctrl + Meta(Alt) + P
 ```
 
 **Buscar buffers abertos com o Fuzzy Finder**
