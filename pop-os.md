@@ -379,7 +379,7 @@ Após instalar, reinicie o terminal para ter acesso ao comando `pip3`.
 Instale a CLI do wakatime:
 
 ```
-pip install wakatime
+pip3 install wakatime
 ```
 
 Reinicie o terminal novamente.
