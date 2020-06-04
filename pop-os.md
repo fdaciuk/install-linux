@@ -322,7 +322,7 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-- Crie o arquivo de configuração `~/.config/nvim/init.vim`, copiando aqui do repo;
+- Crie o arquivo de configuração `~/.config/nvim/init.vim`, copiando [desse repo](https://github.com/fdaciuk/dotfiles);
 - Inicie o neovim com o comando `nvim`;
 - Instale os plugins, com o comando `:PlugInstall` (dentro do vim);
 - Feche o vim e abra novamente.
