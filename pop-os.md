@@ -398,6 +398,12 @@ plugins=(git zsh-autosuggestions zsh-wakatime)
 
 Se o arquivo foi copiado aqui do repo, já deve estar com essa entrada.
 
+Instale o autojump:
+
+```
+sudo apt install autojump
+```
+
 Após a instalação, reinicie o terminal, ou execute:
 
 ```
