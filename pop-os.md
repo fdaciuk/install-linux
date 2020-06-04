@@ -252,20 +252,36 @@ sudo dpkg -i <caminho-do-arquivo.deb>
 **Insomnia**
 
 ```
-sudo snap install insomnia
+# Add to sources
+echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" \
+    | sudo tee -a /etc/apt/sources.list.d/insomnia.list
+
+# Add public key used to verify code signature
+wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc \
+    | sudo apt-key add -
+
+# Refresh repository sources and install Insomnia
+sudo apt-get update
+sudo apt-get install insomnia
 ```
 
 **Postgres**
 https://www.postgresql.org/download/linux/ubuntu/
 
 ```
-sudo apt install postgresql postgresql-contrib dbeaver-ce
+sudo apt install postgresql postgresql-contrib
 ```
 
-**Importante:** Ao atualizar o dbeaver-ce, baixando direto do site o arquivo `.deb`, ao rodar `sudo apt upgrade`, o apt vai tentar fazer DOWNGRADE da versão mais recente para a vesão do repositório. Para manter a versão mais recente, é preciso rodar o comando abaixo:
+**Importante:** Se instalar o dbeaver via apt, ao atualizar o dbeaver-ce, baixando direto do site o arquivo `.deb`, ao rodar `sudo apt upgrade`, o apt vai tentar fazer DOWNGRADE da versão mais recente para a vesão do repositório. Para manter a versão mais recente, é preciso rodar o comando abaixo:
 
 ```
 sudo apt-mark hold dbeaver-ce
+```
+
+Então o melhor é instalar o **dbeaver-ce** via snap, que já tem a versão mais recente:
+
+```
+sudo snap install dbeaver-ce
 ```
 
 Criar senha para o usuário postgres:
