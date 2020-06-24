@@ -487,6 +487,14 @@ OBS.: para comentar várias linhas de uma vez, só selecionar no modo visual:
 <leader><space>
 ```
 
+**Mudar case das palavras (UPPERCASE e lowercase)**
+
+```
+lowercase: gu <movement>
+uppercase: gU <movement>
+toggle case: g~ <movement>
+```
+
 **Buscar arquivos com fzf - Fuzzy Finder (estilo Sublime Text)**
 
 ```
