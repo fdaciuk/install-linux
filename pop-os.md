@@ -495,6 +495,11 @@ uppercase: gU <movement>
 toggle case: g~ <movement>
 ```
 
+**Navegar para onde estava (forward and backward)**
+
+- `g;` = navega para última posição do cursor
+- `g,` = navega para frente
+
 **Buscar arquivos com fzf - Fuzzy Finder (estilo Sublime Text)**
 
 ```
