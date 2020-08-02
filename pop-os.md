@@ -48,11 +48,9 @@ Para isso, clique na aba _Advanced_, depois no menu _Network_, na opção _LAN_.
 
 Com os dois roteadores na mesma faixa de IP, agora vamos conectar o TP-Link na wifi do roteador principal. Clique novamente na guia _Advanced_, vá até o menu _System Tools_ e clique em _System Parameters_.
 
-Role até a sessão _5GHz WDS_, clique para habilitar o checkbox _Enable WDS Bridging_, depois clique no botão _Survey_. As redes 5ghz disponíveis devem aparecer. Se a sua rede não aparecer, e seu modem for igual ao meu, tem uma configuração extra que precisa ser feita no roteador principal.
+Role até a sessão _5GHz WDS_, clique para habilitar o checkbox _Enable WDS Bridging_, depois clique no botão _Survey_. As redes 5ghz disponíveis devem aparecer. Se a sua rede não aparecer, verifique a porta das redes que aparecem, e altere a porta da rede 5ghz do modem principal, para ficar dentro da faixa que o TPLink consegue enxergar.
 
-Meu roteador principal é um Huawei HG8245Q2. Para que eu pudesse ver a rede 5ghz à partir do TP-Link, eu precisei habilitar uma opção em _WLAN > Wifi Coverage Management_ chamada "_Synchronize WLAN to the external AP"_. É o primeiro checkbox que aparece nessa tela. _AP_ significa _Access Point_, que no caso, é o segundo roteador.
-
-Ao fazer isso, esperei reiniciar o roteador principal, e então ao cliar em _Survey_ eu consegui ver minha rede 5G. Conecte na rede clicando no link _Choose_, coloque a senha da sua rede 5ghz e clique em _Save_.
+Então, ao cliar em _Survey_ sua rede 5G deve aparecer. Conecte na rede clicando no link _Choose_, coloque a senha da sua rede 5ghz e clique em _Save_.
 
 Com isso feito, só falta mais um passo: - **lembrando que esse passo deve ser feito só ao final de toda a configuração** - clique em _Network > DHCP Server_ e desabilite a opção _Enable DHCP Server_. Salve e reinicie o roteador, clicando no botão _Reboot_ no topo da página.
 
