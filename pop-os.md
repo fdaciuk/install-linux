@@ -626,6 +626,19 @@ usar os comandos acima para abrir / fechar o fold conforme a necessidade :)
 
 Para fechar todos os foldings criados, só usar `zM`.
 
+#### Copiar / colar (registro)
+
+Quando copiamos algo com `y` no vim, o conteúdo copiado vai para um registro. Se você selecionar um texto, e colar o que foi copiado, com `p`, a próxima vez que você tentar colar, o valor que vai ser colado foi o último valor que foi substituído, não o valor copiado inicialmente com `y`.
+
+Para colar sempre o valor que foi copiado, ao invés de usar apenas `p`, é preciso usar entradas no registro, colando com `"0p`. Isso vai colar o último valor do registro que foi copiado.
+
+É possível copiar também para um registro específico: ao invés de usar `y` para copiar, use `"ay`. Dessa forma, o valor será copiado (`y`) para o registro `a`.
+Para colar à partir desse registro, só usar `"ap`. O `a` pode ser qualquer caractere.
+
+Isso é legal porque é possível várias coisas de uma só vez, e depois só ir colando conforme a necessidade, ao invés de copiar uma coisa, colar ela, e então copiar outra coisa para colar :)
+
+Referência: https://vim.fandom.com/wiki/Copy,_cut_and_paste
+
 ---
 
 ### Tmux
