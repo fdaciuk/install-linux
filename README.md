@@ -210,7 +210,17 @@ sudo update-grub
 exit
 ```
 
-## Use Jack instead pulseaudio
+## Force Reload audio (alsa + pulseaudio)
+
+Run the command:
+
+```sh
+pulseaudio -k && sudo alsa force-reload
+```
+
+Then, restart the computer.
+
+## Use Jack instead of pulseaudio
 
 ```sh
 sudo apt-get install qjackctl pulseaudio-module-jack
