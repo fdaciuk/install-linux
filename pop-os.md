@@ -498,6 +498,18 @@ toggle case: g~ <movement>
 - `g;` = navega para última posição do cursor
 - `g,` = navega para frente
 
+**Navegar para uma linha e coluna específicas**
+
+```
+:call cursor($LINE,$COLUMN)
+```
+
+Exemplo: Quero ir para a linha 10, coluna 12:
+
+```
+:call cursor(10,12)
+```
+
 **Buscar arquivos com fzf - Fuzzy Finder (estilo Sublime Text)**
 
 ```
