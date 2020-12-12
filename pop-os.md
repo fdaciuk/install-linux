@@ -493,6 +493,13 @@ uppercase: gU <movement>
 toggle case: g~ <movement>
 ```
 
+**Incrementar e decrementar números**
+
+Coloque o cursor em cima do número e pressione:
+
+- `Ctrl + a` = para incrementar
+- `Ctrl + x` = para decrementar
+
 **Navegar para onde estava (forward and backward)**
 
 - `g;` = navega para última posição do cursor
