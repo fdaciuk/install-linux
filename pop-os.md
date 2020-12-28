@@ -517,6 +517,16 @@ Exemplo: Quero ir para a linha 10, coluna 12:
 :call cursor(10,12)
 ```
 
+**Navegação entre imports (CoC)
+
+Com o cursor posicionado em cima da variável ou do caminho do `import`, use:
+
+- `gd` = coc-definition
+- `gy` = coc-type-definition
+- `gr` = coc-references
+
+Fonte: [https://thoughtbot.com/blog/modern-typescript-and-react-development-in-vim](https://thoughtbot.com/blog/modern-typescript-and-react-development-in-vim)
+
 **Buscar arquivos com fzf - Fuzzy Finder (estilo Sublime Text)**
 
 ```
