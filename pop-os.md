@@ -517,7 +517,7 @@ Exemplo: Quero ir para a linha 10, coluna 12:
 :call cursor(10,12)
 ```
 
-**Navegação entre imports (CoC)
+**Navegação entre imports (CoC)**
 
 Com o cursor posicionado em cima da variável ou do caminho do `import`, use:
 
