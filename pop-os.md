@@ -453,3 +453,48 @@ https://github.com/fdaciuk/install-linux/blob/master/tmux-shortcuts-and-cheatshe
 Ao tentar gravar no OBS com uma placa Nvidia, as vezes fica passando uma imagem na tela da janela que está atrás. [Nesse link](https://obsproject.com/forum/threads/screen-tearing-obs-preview.25977/) contém a descrição do problema.
 
 Para resolver, só entrar nas configs da Nvidia (Nvidia X Server Settings), selecionar "OpenGL Settings" e desligar a opção "Allow Flipping".
+
+### Problema com atualização de driver da Nvidia
+
+Faça logout, e pressione `Ctrl + Alt + 3`. Isso vai abrir um _tty_.
+
+Então, tente rodar o comando:
+
+```
+sudo dpkg --configure -a
+```
+
+Se o erro persistir, tente:
+
+```
+sudo apt --fix-broken install
+```
+
+Se resolver, ok. Senão, execute os comandos:
+
+```
+sudo apt purge '*nvidia*'
+sudo apt clean
+audo apt update -m
+sudo dpkg --configure -a
+sudo apt install -f
+sudo apt dist-upgrade
+
+# Só execute o comando abaixo se o comando anterior não retornar nenhum erro
+sudo apt autoremove --purge
+```
+
+Feito isso, reinicie o PC.
+Se logar automaticamente, deslogue novamente, entre no _tty_ e digite:
+
+```
+sudo apt --fix-broken install
+```
+
+Após isso, tudo deverá estar resolvido. Então instale as atualizações:
+
+```
+sudo apt update
+sudo apt upgrade -y
+flatpak update -y
+```
