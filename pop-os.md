@@ -102,6 +102,32 @@ https://rastating.github.io/setting-default-audio-device-in-ubuntu-18-04/
 
 ---
 
+## Configuração do Jack para áudio
+
+Instalar pacotes:
+
+```
+sudo apt install qjackctl pulseaudio-module-jack
+```
+
+Iniciar o QJackCtl, e definir em `Setup > Options > Execute script after Startup` o seguinte comando:
+
+```
+pacmd set-default-sink jack_out
+```
+
+Depois, iniciar os módulos para o Pulseaudio redirecionar a entrada e saída de áudio para o Jack:
+
+```
+pactl load-module module-jack-sink
+pactl load-module module-jack-source
+```
+
+E pronto! Para configurar a saída de áudio para "mono", na interface do Jack vá até `Connect` e, na aba `Audio`, 
+conecte todos os canais do lado esquerdo `PulseAudio Jack Sink` com os canais `system` do lado direito.
+
+---
+
 ## Adicionar ícones no system tray (válido somente para a v19.10. Na v20.04 isso já vem isntalado).
 
 Só seguir os procedimentos [desse link](https://pop.system76.com/docs/status-icons/), e reiniciar o PC.
