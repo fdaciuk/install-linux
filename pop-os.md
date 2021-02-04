@@ -492,7 +492,18 @@ sudo apt --fix-broken install
 sudo apt install system76-driver-nvidia
 ```
 
-Após isso, tudo deverá estar resolvido. Então instale as atualizações:
+Se a instalação do `system76-driver-nvidia` falhar, tentar rodar:
+
+```
+sudo apt install -f
+sudo apt --fix-broken install
+```
+
+Depois disso, só tentar instalar novamente.
+
+Após isso, tudo deverá estar resolvido. Se não estiver, tente todos os passos novamente. 
+
+Então instale as atualizações:
 
 ```
 sudo apt update
