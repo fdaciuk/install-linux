@@ -489,6 +489,7 @@ Se logar automaticamente, deslogue novamente, entre no _tty_ e digite:
 
 ```
 sudo apt --fix-broken install
+sudo apt install system76-driver-nvidia
 ```
 
 Após isso, tudo deverá estar resolvido. Então instale as atualizações:
