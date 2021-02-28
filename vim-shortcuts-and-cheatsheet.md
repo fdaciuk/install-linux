@@ -61,6 +61,13 @@ Coloque o cursor em cima do número e pressione:
 - `g;` = navega para última posição do cursor
 - `g,` = navega para frente
 
+**Navegar para o início / fim de um bloco (if, while, function, etc)
+
+- `[{` = navega para o início do bloco (inicia com "abre chaves" `{`)
+- `]}` = navega para o fim do bloco (termina com "fecha chaves" `}`)
+- `[(` = navega para o início do bloco (que inicia com "abre parênteses" `(`)
+- `])` = navega para o fim do bloco (termina com "fecha parênteses" `)`)
+
 **Navegar para uma linha e coluna específicas**
 
 ```
