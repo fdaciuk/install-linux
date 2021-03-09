@@ -99,7 +99,7 @@ Ctrl + p
 **Buscar arquivos com fzf, baseado na árvore do git**
 
 ```
-Ctrl + Meta(Alt) + P
+Shift + Meta(Alt) + P
 ```
 
 **Buscar buffers abertos com o Fuzzy Finder**
@@ -146,7 +146,7 @@ zin
 ```
 
 **Zoom out ([z]oom [n]ot [i]n)**
-> Não use `zo` aqui pois conflita com o atalho de folding.
+> Não usei `zo` aqui pois conflita com o atalho de folding.
 ```
 zni
 ```
@@ -195,6 +195,15 @@ Obs.: O comando `cgn` significa:
 - Em resumo: a palavra buscada vai ser deletada, e o vim vai entrar no modo de inserção para digitar a sibstituição.
 - O `n` é para navegar para o próximo match do valor buscado;
 - O `.` repete o último comando (no caso, o `cgn` e a nova palavra).
+
+**Editar HTML / JSX**
+
+- `cit`: _change inside tag_: deleta e abre para edição o conteúdo de uma tag
+- `cst`: atualiza o nome da tag. Esse comando tem algumas variações:
+  - Edite a tag para `<div` para substituir somente o nome da tag por `div`, mantendo seus atributos;
+  - Edite a tag para `<div>`, para substituir o nome da tag por `div`, removendo os atributos;
+  - Edite a tag para `<div id="minha-div"` para substituir o nome da tag por `div`, e adicionar o atributo `id`, mantendo seus outros atributos;
+  - Edite a tag para `<div id="minha-div">` para substituir o nome da tag por `div`, e adicionar apenas o atributo `id`, removendo todos os outros.
 
 #### Folding
 
