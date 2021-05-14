@@ -187,7 +187,7 @@ service --status-all
 After boot from a Live USB, run on terminal:
 
 ```
-dd if=/dev/sdb3 of=/dev/sda3
+dd if=/dev/sdb3 of=/dev/sda3 status=progress
 ```
 
 Where `sdb3` is the origin, and `sda3` is the destination.
