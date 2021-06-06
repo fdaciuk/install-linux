@@ -95,6 +95,9 @@ Then, use `yaourt` -S <package-name> to install any package ;)
 ```console
 git config --global user.email "your@email"
 git config --global user.name "Your name"
+git config --global merge.tool meld // Install meld first with `sudo apt install meld`
+git config --global pull.rebase true // always rebase when "pull" instead of merge
+git config --global init.defaultbranch main // make "main" the default branch for new projects
 ```
 
 **Generate SSH Keys (or copy, if you already have one):**
