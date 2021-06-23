@@ -496,7 +496,20 @@ Se o erro persistir, tente:
 sudo apt --fix-broken install
 ```
 
-Se resolver, ok. Senão, execute os comandos:
+Se estiver dando um erro do dpkg, e logo depois um erro mostrando várias versões da nvidia, use os comandos:
+
+```
+sudo apt autoremove
+sudo apt install -f
+```
+
+Se após esses comandos o dpkg conseguir finalizar corretamente a configuração, basta reiniciar:
+
+```
+sudo reboot
+```
+
+Não resolvendo, tem que partir pra força bruta. execute os comandos:
 
 ```
 sudo apt purge '*nvidia*'
