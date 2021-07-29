@@ -20,6 +20,13 @@
 <leader>sv
 ```
 
+**Navegação**
+
+- `Ctrl + u`: Navega com rolagem para cima
+- `Ctrl + d`: Navega com rolagem para baixo
+- `Ctrl + y`: Navega para cima sem mover o cursor
+- `Ctrl + e`: Navega para baixo sem mover o cursor
+
 **Comentar linhas**
 
 ```
@@ -61,7 +68,7 @@ Coloque o cursor em cima do número e pressione:
 - `g;` = navega para última posição do cursor
 - `g,` = navega para frente
 
-**Navegar para o início / fim de um bloco (if, while, function, etc)
+**Navegar para o início / fim de um bloco (if, while, function, etc)**
 
 - `[{` = navega para o início do bloco (inicia com "abre chaves" `{`)
 - `]}` = navega para o fim do bloco (termina com "fecha chaves" `}`)
