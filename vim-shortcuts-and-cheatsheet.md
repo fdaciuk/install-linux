@@ -220,10 +220,11 @@ Sabe aqueles editores que tem um botão de "-" ao lado da linha onde começa uma
 sempre no último fold criado. Após ter criado um "fold", sempre que quiser abrir / fechar algum em específico, é só
 posicionar o cursor na linha onde inicia,e pressionar `zc` (close fold) ou `za`.
 
-**Folding em funções**
+**Folding em funções ou tags JSX**
 
-1. Selecione as linhas da função que você quer fazer o fold, e crie o fold com `zfat` (ou `zfit`). Depois é só 
-usar os comandos acima para abrir / fechar o fold conforme a necessidade :)
+1. Selecione as linhas da função que você quer fazer o fold, e crie o fold com `zf` (em alguns casos, será necessário usar o `zfat` ou `zfit`). Depois é só usar os comandos acima para abrir / fechar o fold conforme a necessidade :)
+
+**Dica:** Para selecionar todas as linhas de uma função automaticamente (ou de uma tag no JSX), coloque o cursor em cima do nome da função (ou da tag de abertura) habilite o modo visual (`v`) e então pressione `%`. O `%` navega para o bracket de fechamento da função, ou para a tag de fechamento no JSX. Após fazer isso, só usar o `zf` para criar o folding =)
 
 **Fechar todos os foldings**
 
