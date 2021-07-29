@@ -199,11 +199,13 @@ Obs.: O comando `cgn` significa:
 **Editar HTML / JSX**
 
 - `cit`: _change inside tag_: deleta e abre para edição o conteúdo de uma tag
-- `cst`: atualiza o nome da tag. Esse comando tem algumas variações:
+- `cstt`: atualiza o nome da tag. Esse comando tem algumas variações:
   - Edite a tag para `<div` para substituir somente o nome da tag por `div`, mantendo seus atributos;
   - Edite a tag para `<div>`, para substituir o nome da tag por `div`, removendo os atributos;
   - Edite a tag para `<div id="minha-div"` para substituir o nome da tag por `div`, e adicionar o atributo `id`, mantendo seus outros atributos;
   - Edite a tag para `<div id="minha-div">` para substituir o nome da tag por `div`, e adicionar apenas o atributo `id`, removendo todos os outros.
+
+Outros atalhos podem ser encontrados na documentação do [vim-surround](https://github.com/tpope/vim-surround).
 
 #### Folding
 
