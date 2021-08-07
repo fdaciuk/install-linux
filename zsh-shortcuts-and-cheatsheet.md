@@ -129,3 +129,44 @@ delete-branches
 ```
 
 Para alterar as branches que ele não deve deletar, tem que alterar a função que gera o comando.
+
+**Criar arquivos e diretórios com um único comando**
+
+No Linux, antes de criar um arquivo via terminal com `touch`, nós precisamos criar o diretório onde esse arquivo será criado.
+Para criar diretórios "internos" de um diretório que ainda não existe, usamos o `mkdir -p caminho/do/diretorio/a/ser/criado`.
+Esse comando vai criar os diretórios `caminho`, `do`, `diretorio`, `a`, `ser`, `criado`, um dentro do outro, nessa ordem.
+
+E só então podemos criar arquivos dentro do último diretório com o comando `touch`, usando algo como:
+
+```
+touch caminho/do/diretorio/a/ser/criado/{arquivo1,arquivo2}.txt
+```
+
+Esse comando criará os arquivos `arquivo1.txt` e `arquivo2.txt` dentro do diretório anteriomente criado.
+
+Para evitar ter que usar dois comandos, temos uma função disponível no nosso `zshrc` chamada `mktouch`.
+
+Com essa função, você pode criar quantos arquivos e diretórios quiser, com apenas um comando:
+
+```
+mktouch src/pages/{home,about}/index.ts src/styles/{app,index}.css
+```
+
+O comando acima irá criar os diretórios:
+
+```
+src/pages/home
+src/pages/about
+src/styles
+```
+
+Ainda que os diretórios mais externos ainda não existam, todos serão criados.
+
+E dentro deles, os respectivos arquivos:
+
+```
+src/pages/home/index.ts
+src/pages/about/index.ts
+src/styles/app.css
+src/styles/index.css
+```
