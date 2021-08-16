@@ -114,6 +114,22 @@ ou
 <prefix>{
 ```
 
+**Alterar posição de painéis (definir layout vertical ou horizontal)**
+
+```
+<prefix>Alt + <1-5>
+```
+
+_O que faz cada número?_
+
+| Número | Layout            | Descrição                                                                                                                                                   |
+| :----: | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `1`    | `even-horizontal` | Painéis em colunas                                                                                                                                          |
+| `2`    | `even-vertical`   | Painéis em linhas                                                                                                                                           |
+| `3`    | `main-horizontal` | Painéis em linhas, com o primeiro painel ocupando a linha toda, e os outros painéis na linha de baixo organizados em colunas (um ao lado do outro)          |
+| `4`    | `main-vertical`   | Painéis em colunas, com o primeiro painel ocupando toda a primeira coluna, e os outros painéis na segunda coluna, organizados em linha (um abaixo do outro) |
+| `5`    | `tiled`           | Divide os painéis para tentar deixá-los com a mesma largura / altura                                                                                        |
+
 **Rolagem (scroll)**
 
 ```
