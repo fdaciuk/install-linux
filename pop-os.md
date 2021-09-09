@@ -102,6 +102,48 @@ https://rastating.github.io/setting-default-audio-device-in-ubuntu-18-04/
 
 ---
 
+## Rolagem pela trackball no Logitech MX Ergo
+
+Aqui vamos precisar de duas dependências: `xinput` e `solaar`.
+
+**Configuração do `xinput`:**
+https://www.reddit.com/r/Trackballs/comments/lwvyk9/mx_ergo_trackball_scrolling_in_linux/gpjykaz/?utm_source=reddit&utm_medium=web2x&context=3
+
+> If you're using `X11` and `xinput`:
+> 
+> find the id / name of the input device from this command: `xinput`
+>
+> enable the feature with this magic command: 
+>
+```
+xinput set-prop <id or name of trackball> 'libinput Scroll Method Enabled' 0, 0, 1
+```
+>
+> Not sure if this will work as you want, but libinput has a lot of settings you can play with -- list them with `xinput list-props <device id>`
+>
+> If you're happy with the settings and want to make them permanent you can add them to a config file: as root create a file at ` /etc/X11/xorg.conf.d/10-mx-ergo-scroll-trackball.conf` and put something like this in it:
+
+```
+Section "InputClass"
+	Identifier "<name of the device>"
+	Driver "libinput"
+	Option "ScrollMethod" "button"
+EndSection
+```
+
+> The option names can be found in the manual: `man 4 libinput`
+>
+> If you're on wayland... idk good luck!
+
+Após fazer essa configuração, o scroll com a trackball estará funcionando ao pressionar e segurar o botão do meio do mouse (scroll). Para usar o botão "Forward" no lugar, abra o Solaar e configure o botão "Forward" para funcionar como o "Mouse Middle Button".
+
+### Opções para wayland (não testado)
+- https://www.reddit.com/r/Trackballs/comments/lwvyk9/mx_ergo_trackball_scrolling_in_linux/gpwsn3k/?utm_source=reddit&utm_medium=web2x&context=3
+- https://www.reddit.com/r/Trackballs/comments/lwvyk9/mx_ergo_trackball_scrolling_in_linux/gpt8lah/?utm_source=reddit&utm_medium=web2x&context=3
+- https://www.reddit.com/r/Trackballs/comments/brfs0k/logitech_mx_ergo_stiff_middle_button/eoqgvkq?utm_source=share&utm_medium=web2x&context=3
+
+--
+
 ## Configuração do Jack para áudio
 
 Instalar pacotes:
