@@ -555,6 +555,7 @@ Não resolvendo, tem que partir pra força bruta. execute os comandos:
 
 ```
 sudo apt purge '*nvidia*'
+sudo apt purge '*nvidia*:i386'
 sudo apt clean
 audo apt update -m
 sudo dpkg --configure -a
@@ -570,7 +571,7 @@ Se logar automaticamente, deslogue novamente, entre no _tty_ e digite:
 
 ```
 sudo apt --fix-broken install
-sudo apt install system76-driver-nvidia
+sudo apt install g++-9-multilib pop-desktop system76-driver-nvidia system76-cuda-latest
 ```
 
 Se a instalação do `system76-driver-nvidia` falhar, tentar rodar:
