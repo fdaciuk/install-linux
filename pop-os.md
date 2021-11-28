@@ -449,6 +449,14 @@ psql -h localhost -U postgres
 sudo apt install neovim
 ```
 
+Para instalar a versão stable mais recente, use o [PPA](https://launchpad.net/~neovim-ppa/+archive/ubuntu/stable):
+
+```
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt update
+sudo apt install neovim
+```
+
 - Instale o `curl` e `wget` se ainda não o tiver feito;
 - Crie o diretório de configuração do neovim em `~/.config/nvim`;
 - Instale o [vim plug](https://github.com/junegunn/vim-plug) para gerenciamento de plugins, no diretório `~/.config/nvim/autoload`, com o comando:
