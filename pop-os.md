@@ -1,6 +1,6 @@
 # Pop!\_OS
 
-> Informações importantes para instalações gerais no Pop!\_OS v20.04
+> Informações importantes para instalações gerais no Pop!\_OS v21.04
 
 ## Passo a passo inicial
 
@@ -178,7 +178,7 @@ conecte todos os canais do lado esquerdo `PulseAudio Jack Sink` com os canais `s
 
 ---
 
-## Adicionar ícones no system tray (válido somente para a v19.10. Na v20.04 isso já vem isntalado).
+## Adicionar ícones no system tray (válido somente para a v19.10. Na v20.04 ou posterior isso já vem instalado).
 
 Só seguir os procedimentos [desse link](https://pop.system76.com/docs/status-icons/), e reiniciar o PC.
 
@@ -245,6 +245,68 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 ```
 sudo apt update && sudo apt install --no-install-recommends yarn
 ```
+
+**asdf**
+https://github.com/asdf-vm/asdf
+
+- [Getting Started](https://asdf-vm.com/guide/getting-started.html)
+
+Baixe o `asdf`:
+
+```
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
+```
+
+Para instalar o `asdf` com ZSH + oh-my-zsh, é só baixar [o plugin](https://github.com/kiurchv/asdf.plugin.zsh):
+
+```
+git clone https://github.com/kiurchv/asdf.plugin.zsh $HOME/.oh-my-zsh/custom/plugins/asdf
+```
+
+**asdf para Erlang**
+https://github.com/asdf-vm/asdf-erlang
+
+Dependências necessárias:
+
+```
+sudo apt install build-essential autoconf m4 libncurses5-dev libwxgtk3.0-gtk3-dev libgl1-mesa-dev libglu1-mesa-dev libpng-dev libssh-dev unixodbc-dev xsltproc fop libxml2-utils libncurses-dev openjdk-11-jdk
+```
+
+Instale do plugin do Erlang:
+```
+asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
+```
+
+Instale o Erlang:
+
+```
+asdf install erlang latest
+```
+
+Defina como a versão "global":
+
+```
+asdf global erlang latest
+```
+
+Use `asdf list` para conferir se o Erlang aparece na listagem.
+
+**asdf para Elixir**
+https://github.com/asdf-vm/asdf-elixir
+
+Instale o Elixir:
+
+```
+asdf install elixir latest
+```
+
+Defina como a versão "global":
+
+```
+asdf global elixir latest
+```
+
+Use `asdf list` para conferir se o Elixir aparece na listagem.
 
 **Psensor (software gráfico para sensores de temperatura do hardware)**
 
