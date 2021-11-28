@@ -289,8 +289,8 @@ Defina como a versão "global":
 asdf global erlang latest
 ```
 
-Se houver qualquer problema com a instalação, você pode instalar o erlang à nível de SO mesmo:
-https://itsfoss.com/install-erlang-ubuntu/
+_Se houver qualquer problema com a instalação, você pode instalar o erlang à nível de SO mesmo:
+https://itsfoss.com/install-erlang-ubuntu/_
 
 Use `asdf list` para conferir se o Erlang aparece na listagem.
 
@@ -316,6 +316,10 @@ asdf global elixir latest
 ```
 
 Use `asdf list` para conferir se o Elixir aparece na listagem.
+
+**Docker**
+
+https://docs.docker.com/engine/install/ubuntu/
 
 **Psensor (software gráfico para sensores de temperatura do hardware)**
 
