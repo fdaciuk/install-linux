@@ -377,6 +377,14 @@ Copie o diretório `conky` daqui do repo para dentro do diretório `~/.config`. 
 
 Só baixar o executável, colocar em qualquer lugar que você queira manter, e executar. Automaticamente será gerado um arquivo `telegramdesktop.desktop`, com um atalho no Gnome.
 
+Também é possível instalar via PPA:
+
+```
+sudo add-apt-repository ppa:atareao/telegram
+sudo apt update
+sudo apt install telegram
+```
+
 **Slack Desktop**
 
 Também só baixar o `.deb` e executá-lo, ou clicando duas vezes, ou com o comando:
