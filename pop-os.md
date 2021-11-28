@@ -118,6 +118,14 @@ https://www.reddit.com/r/Trackballs/comments/lwvyk9/mx_ergo_trackball_scrolling_
 ```
 xinput set-prop <id or name of trackball> 'libinput Scroll Method Enabled' 0, 0, 1
 ```
+
+---
+O comando provavelmente vai ser:
+```
+xinput set-prop pointer:"Logitech MX Ergo" 'libinput Scroll Method Enabled' 0, 0, 1
+```
+---
+
 >
 > Not sure if this will work as you want, but libinput has a lot of settings you can play with -- list them with `xinput list-props <device id>`
 >
