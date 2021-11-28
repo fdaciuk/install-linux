@@ -289,10 +289,19 @@ Defina como a versão "global":
 asdf global erlang latest
 ```
 
+Se houver qualquer problema com a instalação, você pode instalar o erlang à nível de SO mesmo:
+https://itsfoss.com/install-erlang-ubuntu/
+
 Use `asdf list` para conferir se o Erlang aparece na listagem.
 
 **asdf para Elixir**
 https://github.com/asdf-vm/asdf-elixir
+
+Adicione o plugin do Elixir:
+
+```
+asdf plugin add elixir https://github.com/asdf-vm/asdf-elixir.git
+```
 
 Instale o Elixir:
 
