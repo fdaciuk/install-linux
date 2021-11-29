@@ -209,6 +209,14 @@ sudo apt install snapd
 
 ---
 
+## Instalação da NordVPN
+
+Instalação e comandos da CLI:
+
+https://support.nordvpn.com/Connectivity/Linux/1325531132/Installing-and-using-NordVPN-on-Debian-Ubuntu-Raspberry-Pi-Elementary-OS-and-Linux-Mint.htm
+
+---
+
 ## Softwares adicionais para instalar
 
 **Alacritty (terminal que roda sobre a GPU)**
