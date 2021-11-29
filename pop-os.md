@@ -691,3 +691,70 @@ sudo apt update
 sudo apt upgrade -y
 flatpak update -y
 ```
+
+## Atualizar todos pacotes, menos drivers da Nvidia
+
+```
+apt list --upgradable | awk -F' ' '{print $1}' | grep -v nvidia | awk -F/ '{print $1}' | tr '\n' ' '
+```
+
+Explicando o comando:
+
+`apt list --upgradable` vai trazer uma lista de todos os pacotes que podem ser atualizados. Normalmente é executado após um `sudo apt update`, e o retorno é uma lista assim:
+
+```
+firefox/hirsute,hirsute 12.5-1pop0~1637635465~21.04~47710c4 all [upgradable from: 12.2-1pop0~1635369482~21.04~2aeb070]
+libreoffice/hirsute,hirsute 11.2-1pop0~1637635465~21.04~47710c4 all [upgradable from: 11.0-1pop0~1635369482~21.04~2aeb070]
+libnvidia-cfg1-470/hirsute 470.86-1pop0~1637635465~21.04~47710c4 amd64 [upgradable from: 470.82.00-1pop0~1635369482~21.04~2aeb070]
+libnvidia-common-470/hirsute,hirsute 470.86-1pop0~1637635465~21.04~47710c4 all [upgradable from: 470.82.00-1pop0~1635369482~21.04~2aeb070]
+```
+
+Esse resultado é passado via pipe operator para o próximo comando: `awk -F' ' '{print $1}'`.
+
+O `awk` é uma linguagem usada para manipular strings. o `-F' '` define um separador (funciona como um split). Esse separador é um espaço.
+No caso do resultado acima, vamos pegar como exemplo a primeira linha:
+
+```
+firefox/hirsute,hirsute 12.5-1pop0~1637635465~21.04~47710c4 all [upgradable from: 12.2-1pop0~1635369482~21.04~2aeb070]
+```
+
+Isso retornaria uma lista com dois valores (que foram separados pelo espaço): a primeira parte seria o `firefox/hirsute,hirsute` e a segunda parte, o restante da string que vem após o primeiro espaço.
+
+O `'{print $1}'` exibe a primeira parte da lista.
+
+Até aqui, o resultado seria:
+
+```
+firefox/hirsute,hirsute
+libreoffice/hirsute,hirsute
+libnvidia-cfg1-470/hirsute
+libnvidia-common-470/hirsute,hirsute
+```
+
+O próximo comando é o `grep -v nvidia`. O grep serve para fazer uma busca na string, e o `-v` indica que eu quero os resultados que **não contenham** a string passada, ou seja: quero todos os resultados que não contenham a palavra **nvidia**. O resultado vai ser:
+
+```
+firefox/hirsute,hirsute
+libreoffice/hirsute,hirsute
+```
+
+O próximo comando é um `awk` mais uma vez (`awk -F/ '{print $1}'`), mas dessa vez o separador é a barra. Queremos apenas o nome da dependência. Após esse comando, o resultado será:
+
+```
+firefox
+libreoffice
+```
+
+E por fim, só precisamos colocar os nomes das dependências uma ao lado da outra, separados por espaço, ao invés de uma por linha. Para isso, usamos o comando `tr '\n' ' '`. O nome do comando significa _translate_, e ele irá traduzir todas as quebras de linha para espaços. O resultado será:
+
+```
+firefox libreoffice
+```
+
+Agora que temos as dependências, só precisamos copiar a linha toda, e executar com o comando:
+
+```
+sudo apt --only-upgrade install firefox libreoffice
+```
+
+Pronto! Todas as dependências serão atualizadas, menos os drivers da Nvidia :D
