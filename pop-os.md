@@ -678,7 +678,7 @@ Se logar automaticamente, deslogue novamente, entre no _tty_ e digite:
 
 ```
 sudo apt --fix-broken install
-sudo apt install g++-9-multilib pop-desktop system76-driver-nvidia system76-cuda-latest
+sudo apt install g++-9-multilib gcc-9-multilib pop-desktop system76-driver-nvidia system76-cuda-latest
 ```
 
 Se a instalação do `system76-driver-nvidia` falhar, tentar rodar:
