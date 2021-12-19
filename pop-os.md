@@ -122,8 +122,17 @@ xinput set-prop <id or name of trackball> 'libinput Scroll Method Enabled' 0, 0,
 ---
 O comando provavelmente vai ser:
 ```
-xinput set-prop pointer:"Logitech MX Ergo" 'libinput Scroll Method Enabled' 0, 0, 1
+xinput set-prop pointer:"Logitech MX Ergo" 'libinput Scroll Method Enabled' 0, 0, k
 ```
+
+No Gnome 40, para funcionar corretamente, é preciso ativar também o `libinput Button Scrolling Button` para o botão `2` (botão do meio do mouse, usado para rolagem).
+
+E então, executar mais esse comando:
+
+```
+xinput set-prop pointer:"Logitech MX Ergo" "libinput Button Scrolling Button" 2
+```
+
 ---
 
 >
@@ -136,6 +145,7 @@ Section "InputClass"
 	Identifier "<name of the device>"
 	Driver "libinput"
 	Option "ScrollMethod" "button"
+	Option "ScrollButton" "2"
 EndSection
 ```
 
