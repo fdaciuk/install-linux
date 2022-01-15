@@ -671,13 +671,12 @@ sudo reboot
 Não resolvendo, tem que partir pra força bruta. execute os comandos:
 
 ```
-sudo apt purge '*nvidia*'
-sudo apt purge '*nvidia*:i386'
+sudo apt purge \~nnvidia
 sudo apt clean
 audo apt update -m
 sudo dpkg --configure -a
 sudo apt install -f
-sudo apt dist-upgrade
+sudo apt full-upgrade
 
 # Só execute o comando abaixo se o comando anterior não retornar nenhum erro
 sudo apt autoremove --purge
