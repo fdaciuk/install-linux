@@ -263,7 +263,7 @@ https://stedolan.github.io/jq/
 
 Após isso, podemos usar os comandos básicos no Neovim:
 
-- `%!jq .` - Beautify
-- `%!jq -c .` - Uglify
+- `%!jq .` - Beautify: pegar um JSON sem formatação e formata de forma que facilite a visualização
+- `%!jq -c .` - Uglify: pega um JSON formatado e coloca tudo em uma linha só
 
 ---
