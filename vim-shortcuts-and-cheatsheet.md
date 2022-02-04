@@ -253,3 +253,17 @@ Isso é legal porque é possível várias coisas de uma só vez, e depois só ir
 
 Referências: 
 - https://vim.fandom.com/wiki/Copy,_cut_and_paste
+
+---
+
+**Formatar JSON (beutify / uglify)**
+
+Instale a dependência `jq` no seu sistema operacional: 
+https://stedolan.github.io/jq/
+
+Após isso, podemos usar os comandos básicos no Neovim:
+
+`%!jq .` - Beautify
+`%!jq -c .` - Uglify
+
+---
