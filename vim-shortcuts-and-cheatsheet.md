@@ -263,7 +263,7 @@ https://stedolan.github.io/jq/
 
 Após isso, podemos usar os comandos básicos no Neovim:
 
-`%!jq .` - Beautify
-`%!jq -c .` - Uglify
+- `%!jq .` - Beautify
+- `%!jq -c .` - Uglify
 
 ---
