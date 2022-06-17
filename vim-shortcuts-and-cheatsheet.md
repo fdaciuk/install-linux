@@ -20,6 +20,18 @@
 <leader>sv
 ```
 
+**Fern**
+
+- Abrir o vim já com o Fern em drawer mode: `vim "+Fern . -drawer"`
+- `ctrl + w`: navega entre os splits
+
+**Abrir terminal dentro do Vim**
+
+- `<leader>t` - abre o terminal em split mode, abaixo do buffer direito
+- `<leader>vt` - abre o terminal em split mode vertical, à direita do buffer direito
+- `ctrl + \ n`: muda do modo Terminal para o modo Normal
+- `zoom` - Dá zoom no buffer fazendo ele ocupar toda a área vertical (sem alterar no Fern)
+
 **Navegação**
 
 - `Ctrl + u`: Navega com rolagem para cima
