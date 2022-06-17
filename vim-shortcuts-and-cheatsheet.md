@@ -30,7 +30,6 @@
 - `<leader>t` - abre o terminal em split mode, abaixo do buffer direito
 - `<leader>vt` - abre o terminal em split mode vertical, à direita do buffer direito
 - `ctrl + \ n`: muda do modo Terminal para o modo Normal
-- `zoom` - Dá zoom no buffer fazendo ele ocupar toda a área vertical (sem alterar no Fern)
 
 **Navegação**
 
@@ -162,6 +161,14 @@ Exemplo:
 **Zoom in ([z]oom [in])**
 ```
 zin
+```
+
+
+**Zoom in (para usar com o Fern drawer)**
+Dá zoom no buffer fazendo ele ocupar toda a área vertical (sem alterar a área do Fern em drawer mode)
+
+```
+zoom
 ```
 
 **Zoom out ([z]oom [n]ot [i]n)**
