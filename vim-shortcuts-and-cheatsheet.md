@@ -24,6 +24,8 @@
 
 - Abrir o vim já com o Fern em drawer mode: `vim "+Fern . -drawer"`
 - `ctrl + w`: navega entre os splits
+- `alt + f`: toggle do drawer do Fern
+- `alt + a`: foco no drawer aberto
 
 **Abrir terminal dentro do Vim**
 
