@@ -135,6 +135,13 @@ Ctrl + o
 - `gv` = Lista todos os buffers e aceita um novo buffer como argumento, que será aberto em um split vertical
 - `Ctrl + 6` ou `gp` = Alterna entre os dois últimos buffers
 
+**Navegar entre buffers em split mode**
+
+- `Alt + w` = Navega para o buffer acima
+- `Alt + a` = Navega para o buffer à esquerda
+- `Alt + s` = Navega para o buffer abaixo
+- `Alt + d` = Navega para o buffer à direita
+
 **Rodar um comando em todos os buffers**
 
 ```
@@ -165,12 +172,18 @@ Exemplo:
 zin
 ```
 
-
-**Zoom in (para usar com o Fern drawer)**
-Dá zoom no buffer fazendo ele ocupar toda a área vertical (sem alterar a área do Fern em drawer mode)
+**Zoom in vertical (para usar com buffers em split mode)**
+Dá zoom no buffer fazendo ele ocupar toda a área vertical
 
 ```
-zoom
+zv
+```
+
+**Zoom in horizontal (para usar com buffers em split mode)**
+Dá zoom no buffer fazendo ele ocupar toda a área horizontal
+
+```
+zh
 ```
 
 **Zoom out ([z]oom [n]ot [i]n)**
