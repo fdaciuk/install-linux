@@ -40,11 +40,9 @@ _Esse roteador da TP-Link é Gigabit, ou seja, suporta velocidades acima de 100m
 
 Esse roteador da TP-Link não funciona muito bem em 2.4ghz. Ao menos comigo, a velocidade da internet fica em torno de 20% do valor total, e dificilmente passa disso. Então vou mostrar como configurá-lo para ser usado na frequência de 5ghz.
 
-Faça a configuração inicial do TP-Link, com ele conectado ao PC pelo cabo de rede. Quando for para selecionar o tipo de acesso, deixe como _Router_. **Não mude** para _Access Point_. 
+Ao acessar a interface do roteador, e criar uma senha, a primeira coisa a fazer é colocar o IP dele no mesma faixa de IP do roteador principal. Exemplo: o IP padrão do TP-Link é 192.168.0.1, e o meu roteador principal está em 192.168.1.1. Vamos deixar o TP-Link no IP 192.168.1.2.
 
-Ao acessar a interface do roteador, a primeira coisa a fazer é colocar o IP dele no mesma faixa de IP do roteador principal. Exemplo: o IP padrão do TP-Link é 192.168.0.1, e o meu roteador principal está em 192.168.100.1. Vamos deixar o TP-Link no IP 192.168.100.2.
-
-Para isso, clique na aba _Advanced_, depois no menu _Network_, na opção _LAN_. Modifique o _IP Address_ para ficar na mesma faixa do seu roteador principal. No meu caso, o valor desse campo vai ser 192.168.100.2. Ao clicar em _Save_, o roteador irá reiniciar. Aguarde a nova tela de login, agora no novo endereço.
+Para isso, clique na aba _Advanced_, depois no menu _Network_, na opção _LAN_. Modifique o _IP Address_ para ficar na mesma faixa do seu roteador principal. No meu caso, o valor desse campo vai ser 192.168.1.2. Ao clicar em _Save_, o roteador irá reiniciar. Aguarde a nova tela de login, agora no novo endereço.
 
 Com os dois roteadores na mesma faixa de IP, agora vamos conectar o TP-Link na wifi do roteador principal. Clique novamente na guia _Advanced_, vá até o menu _System Tools_ e clique em _System Parameters_.
 
@@ -52,9 +50,9 @@ Role até a sessão _5GHz WDS_, clique para habilitar o checkbox _Enable WDS Bri
 
 Então, ao cliar em _Survey_ sua rede 5G deve aparecer. Conecte na rede clicando no link _Choose_, coloque a senha da sua rede 5ghz e clique em _Save_.
 
-Com isso feito, só falta mais um passo: - **lembrando que esse passo deve ser feito só ao final de toda a configuração** - clique em _Network > DHCP Server_ e desabilite a opção _Enable DHCP Server_. Salve e reinicie o roteador, clicando no botão _Reboot_ no topo da página.
+Com isso feito, só falta mais um passo, opcional: clique em _Network > DHCP Server_ e deixe o _Default Gateway_ apontando para o IP do seu modem principal. Não é obrigatório, mas eu gosto de manter assim. Feito isso, olhe na aba _Status_, em _Wireless_, na opção _5G_, se o status do _WDS_ está como _Run_. Se estiver como _Assoc_, só aguarde até ficar _Run_.
 
-Ao reiniciar, você já deve estar com acesso a internet \o/
+Pronto, você já deve estar com acesso a internet \o/
 
 ---
 
