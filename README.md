@@ -232,6 +232,14 @@ pactl load-module module-jack-source
 pactl set-default-sink jack_out # Or open Sound Configuration and select "Jack"
 ```
 
+## Flatpak Permissions
+
+To give permissions for a flatpak app to access everything that is in the host, just run:
+
+```sh
+sudo flatpak override ApplicationIDHere --filesystem=host
+```
+
 ## License
 
 [MIT](https://github.com/fdaciuk/licenses/blob/master/MIT-LICENSE.md) © Fernando Daciuk
