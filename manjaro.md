@@ -30,3 +30,15 @@ O 518 é o número do kernel. É importante ficar atento porque, ao instalar o d
 Veja se a versão do kernel é estável antes de instalar. Prefira sempre usar versões LTS.
 
 Após a instalação, é só reiniciar o PC novamente que tudo vai estar funcionando \o/
+
+## Downgrade de pacotes
+
+Com o lançamento da v254 do systemd, o Gnome começou a dar crash quando tentávamos reiniciar o GDM usando "Alt + F2 + r". Com a v253 o problema não acontece.
+Para fazer o downgrade do systemd (ou qualquer outro pacote) é só seguir as instruções [desse link](https://wiki.manjaro.org/index.php/Downgrading_packages).
+
+### Issues relacionadas com o problema do systemd 254 para acompanhar
+
+- https://gitlab.gnome.org/GNOME/gnome-shell/-/issues/6899
+- https://bbs.archlinux.org/viewtopic.php?id=287955
+
+Para verificar a versão do `systemd`, executar `systemctl --version`.
